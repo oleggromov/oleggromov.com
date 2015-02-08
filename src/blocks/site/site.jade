@@ -1,0 +1,21 @@
+doctype html
+html
+head
+	meta(charset="UTF-8")
+	title
+		block title
+
+	link(rel="stylesheet", href="/static/styles.css")
+body
+	.site
+		h1.site__title
+			block site_title
+
+		block content
+
+		aside.site__sidebar.sidebar
+			.sidebar__about
+				include /blocks/about/about
+
+			nav.sidebar__links
+				include /blocks/links/links
