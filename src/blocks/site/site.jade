@@ -8,10 +8,11 @@ head
 	link(rel="stylesheet", href="/static/styles.css")
 body
 	.site
-		h1.site__title
-			block site_title
+		.site__content
+			block content
 
-		block content
+		.site__date
+			block date
 
 		aside.site__sidebar.sidebar
 			.sidebar__about

@@ -1,3 +1,10 @@
+<!---
+{
+	"title": "IE postMessage between windows and tabs",
+	"date": "2015-02-12",
+	"template": "useful"
+}
+-->
 # IE postMessage between windows and tabs
 
 IE supports window.postMessage—the cross-origin communication method since the 8th version. But it doesn’t support messaging between tabs or windows. The reason is, the Loosely Coupled IE feature which made the browser more stable (each tab or window has its own process) but also made communication between different windows or tabs nearly impossible.
