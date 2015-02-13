@@ -1,7 +1,7 @@
 <!---
 {
 	"title": "IE postMessage between windows and tabs",
-	"date": "2015-02-12",
+	"date": "2015-02-12 23:21",
 	"template": "useful"
 }
 -->
@@ -25,4 +25,4 @@ Some event then occurs in child window, e.g. user clicks the button, and child.c
 
 The child window which is opened in iframe catches cookie change by means of polling. Once the message is caught, listener removes the cookie and sends the message to its parent. Parent then can properly dispatch the message, as it has been sent from the window itself.
 
-The maximum cookie size is big enough to temporarily contain any message, so the problem is solver roughly.
+The maximum cookie size is big enough to temporarily contain any message, so the problem is solved roughly.
