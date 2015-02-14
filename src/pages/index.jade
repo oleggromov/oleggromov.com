@@ -4,4 +4,12 @@ block title
 	| Oleg Gromov
 
 block content
-	| Articles...
+	each article in articles
+		article.article
+			h1
+				a(href=article.url)= article.title
+			p.date= article.date
+			| !{article.preview}
+
+			p.more
+				a.more__link(href=article.url)= article.more

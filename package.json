@@ -5,6 +5,8 @@
     "gulp-markdown": "^1.0.0",
     "through2": "^0.6.3",
     "jade": "^1.9.2",
-    "gulp-util": "^3.0.3"
+    "gulp-util": "^3.0.3",
+    "gulp-data": "^1.2.0",
+    "lodash": "^3.2.0"
   }
 }
