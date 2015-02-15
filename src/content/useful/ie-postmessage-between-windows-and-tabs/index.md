@@ -1,8 +1,6 @@
 <!---
 {
-	"title": "IE postMessage between windows and tabs",
 	"date": "2015-02-12 23:21",
-	"preview": "<p>IE supports window.postMessage—the cross-origin communication method since the 8th version. But it doesn’t support messaging between tabs or windows. The reason is, the Loosely Coupled IE feature which made the browser more stable (each tab or window has its own process) but also made communication between different windows or tabs nearly impossible.</p>",
 	"more": "How to fix broken postMessage in IE 8-11",
 
 	"template": "useful"
@@ -10,7 +8,7 @@
 -->
 # IE postMessage between windows and tabs
 
-IE supports window.postMessage—the cross-origin communication method since the 8th version. But it doesn’t support messaging between tabs or windows. The reason is, the Loosely Coupled IE feature which made the browser more stable (each tab or window has its own process) but also made communication between different windows or tabs nearly impossible.
+IE supports window.postMessage—the **cross-origin communication** method since the 8th version. But it doesn’t support messaging between tabs or windows. The reason is, the Loosely Coupled IE feature which made the browser more stable (each tab or window has its own process) but also made communication between different windows or tabs nearly impossible.
 
 Even today, when the last version’s global market share is more than 20 per cent and the 8-10 versions together own about 30 per cent, the bug isn’t fixed yet. The interesting question is, will postMessage work with the upcoming Spartan or not, but anyhow, we have to and will be obliged to work with those legacy 8 to 11 versions of Internet Explorer.
 
