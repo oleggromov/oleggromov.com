@@ -3,7 +3,7 @@
 	"date": "2015-03-21 12:00",
 	"more": "See how we celebrate",
 
-	"template": "useful"
+	"template": "article"
 }
 -->
 # Happy birthday dear Oleg!
