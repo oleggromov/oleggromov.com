@@ -1,22 +1,22 @@
 doctype html
 html
-head
-	meta(charset="UTF-8")
-	title
-		block title
+	head
+		meta(charset="UTF-8")
+		title
+			block title
 
-	link(rel="stylesheet", href="/static/styles.css")
-body
-	.site
-		.site__content
-			block content
+		link(rel="stylesheet", href="/static/styles.css")
+	body
+		.site
+			.site__content
+				block content
 
-		.site__date
-			block date
+			.site__date
+				block date
 
-		aside.site__sidebar.sidebar
-			.sidebar__about
-				include /blocks/about/about
+			aside.site__sidebar.sidebar
+				.sidebar__about
+					include /blocks/about/about
 
-			nav.sidebar__links
-				include /blocks/links/links
+				nav.sidebar__links
+					include /blocks/links/links
