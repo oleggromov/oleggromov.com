@@ -3,7 +3,7 @@
 	"date": "2015-02-12 23:21",
 	"more": "How to fix broken postMessage in IE 8-11",
 
-	"template": "article"
+	"page": "article"
 }
 -->
 # IE postMessage between windows and tabs

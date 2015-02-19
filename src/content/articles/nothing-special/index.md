@@ -3,7 +3,7 @@
 	"date": "2017-01-31 23:21",
 	"more": "Read more on Nothing special",
 
-	"template": "article"
+	"page": "article"
 }
 -->
 # Nothing special
