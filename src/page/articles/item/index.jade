@@ -1,3 +1,5 @@
+include /blocks/links/links
+
 extends /blocks/site/site
 
 block title
@@ -8,3 +10,6 @@ block date
 
 block content
 	| !{content}
+
+block menu
+	+links(menu)
