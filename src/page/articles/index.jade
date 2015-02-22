@@ -1,3 +1,5 @@
+include /blocks/links/links
+
 extends /blocks/site/site
 
 block title
@@ -13,3 +15,6 @@ block content
 
 			p.more
 				a.more__link(href=article.url)= article.more
+
+block menu
+	+links(menu)
