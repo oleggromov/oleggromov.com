@@ -15,5 +15,7 @@ Once I understand how this static site generator can better meet my needs of blo
 	* make one layout (html, body, sidebar etc) which is extended by different pages (index, article, about)
 	* split articles' content into tokens (heading, paragraph and so on) to insert date between the heading of article and its body
 	* take out links from the template into config
+	* set up css compilation from blocks in stylus
+	* transform the whole site into repositories: content (markdown in fixed format), static engine and it's config
 * menu:
 	* decide how to automatically mark active menu points
