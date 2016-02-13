@@ -7,9 +7,11 @@ Once I understand how this static site generator can better meet my needs of blo
 	* ~~append disqus widgets to the article pages~~
 	* make code highlighting possible (maybe using highlight.js)
 	* decide how to include images into articles
+	* insert yandex metrika into site
 * appearance
 	* ~~make mobile-friendly versions (smartphone and tablet)~~
 	* find an appropriate style (fonts, spacing etc)
+	* [color scheme](https://color.adobe.com/Birdfolio-Blues-color-theme-7588080)
 * structure
 	* decompose gulpfile to separate files by site sections
 	* make one layout (html, body, sidebar etc) which is extended by different pages (index, article, about)
@@ -19,3 +21,5 @@ Once I understand how this static site generator can better meet my needs of blo
 	* transform the whole site into repositories: content (markdown in fixed format), static engine and it's config
 * menu:
 	* decide how to automatically mark active menu points
+* deploy
+	* write scripts
