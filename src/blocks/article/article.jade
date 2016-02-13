@@ -5,21 +5,25 @@ html
 		title
 			block title
 
+		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(rel="stylesheet", href="/static/styles.css")
 	body
 		.site
+			aside.site__about
+				.sidebar
+					.sidebar__about
+						include /blocks/about/about
+
+					nav.sidebar__links
+						block menu
+
 			.site__content
 				.article
 					block content
-					.article__date
+					.article__date.article__date_after
 						block date
 
 					.article__comments
 						include /blocks/disqus/disqus
 
-			aside.site__sidebar.sidebar
-				.sidebar__about
-					include /blocks/about/about
 
-				nav.sidebar__links
-					block menu

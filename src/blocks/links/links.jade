@@ -3,7 +3,7 @@ mixin links(links)
 		.links__group
 			each link in links
 				if link.active
-					span.links__item= link.caption
+					span.links__item.links__item_active= link.caption
 				else
 					a.links__item(href=link.url)= link.caption
 
