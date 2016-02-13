@@ -4,7 +4,7 @@ Once I understand how this static site generator can better meet my needs of blo
 
 ## TODO
 * functionality
-	* append disqus widgets to the article pages
+	* ~~append disqus widgets to the article pages~~
 	* make code highlighting possible (maybe using highlight.js)
 	* decide how to include images into articles
 * appearance
@@ -14,5 +14,6 @@ Once I understand how this static site generator can better meet my needs of blo
 	* decompose gulpfile to separate files by site sections
 	* make one layout (html, body, sidebar etc) which is extended by different pages (index, article, about)
 	* split articles' content into tokens (heading, paragraph and so on) to insert date between the heading of article and its body
+	* take out links from the template into config
 * menu:
 	* decide how to automatically mark active menu points
