@@ -1,15 +1,15 @@
 include /blocks/links/links
 
-extends /blocks/site/site
+extends /blocks/article/article
 
 block title
 	| #{title} — oleggromov.com
 
-block date
-	| #{date}
-
 block content
 	| !{content}
+
+block date
+	| #{date}
 
 block menu
 	+links(menu)
