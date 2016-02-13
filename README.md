@@ -8,6 +8,7 @@ Once I understand how this static site generator can better meet my needs of blo
 	* make code highlighting possible (maybe using highlight.js)
 	* decide how to include images into articles
 	* insert yandex metrika into site
+	* RSS with articles
 * appearance
 	* ~~make mobile-friendly versions (smartphone and tablet)~~
 	* find an appropriate style (fonts, spacing etc)
