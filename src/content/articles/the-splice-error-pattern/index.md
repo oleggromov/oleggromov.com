@@ -50,9 +50,5 @@ The second approach is to lock the array like in concurrent computing until the 
 The third one I prefer is not to modify array’s length at all, but replace an item with undefined value instead of it. It is very simple and seems more efficient if we suppose an array could be large.
 
 
-## Conclusion
-
-Beware of array modification while bypassing it. This pattern causes difficult to find and fix bugs to appear in your programs together with grey hair to conquer your head. Use non-modifying deletion of items instead, recalling empty items removal after all if you need such behavior.
-
 ## What do you think
 Have something to say on this erroneous pattern? Please use the comment form below to share your thoughts!
