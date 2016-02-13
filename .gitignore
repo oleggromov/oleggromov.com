@@ -1,5 +1,4 @@
 node_modules/
-build/*
-!build/static/
+build/
 log/
 .DS_Store
