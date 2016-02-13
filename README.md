@@ -8,8 +8,8 @@ Once I understand how this static site generator can better meet my needs of blo
 	* make code highlighting possible (maybe using highlight.js)
 	* decide how to include images into articles
 * appearance
+	* ~~make mobile-friendly versions (smartphone and tablet)~~
 	* find an appropriate style (fonts, spacing etc)
-	* make mobile-friendly versions (smartphone and tablet)
 * structure
 	* decompose gulpfile to separate files by site sections
 	* make one layout (html, body, sidebar etc) which is extended by different pages (index, article, about)
