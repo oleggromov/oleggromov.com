@@ -1,12 +1,7 @@
 module.exports = [
 	{
-		caption: 'Articles',
+		caption: 'Articles list',
 		url: '/articles/',
 		active: false,
-	},
-	{
-		caption: 'About me',
-		url: '/about/',
-		active: false
 	}
 ];
