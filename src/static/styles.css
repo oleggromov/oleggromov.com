@@ -21,6 +21,7 @@ body {
 @media (min-width: 1000px) {
 	.site {
 		max-width: 1200px;
+		padding-right: 2em;
 		margin: 0 auto;
 		overflow: hidden;
 		font: normal 18px/1.4 "PT Sans",sans-serif;
@@ -30,7 +31,6 @@ body {
 		float: right;
 		box-sizing: border-box;
 		width: 20em;
-		padding-right: 25px;
 	}
 
 	.site__content {
