@@ -7,7 +7,7 @@ Once I understand how this static site generator can better meet my needs of blo
 	* ~~append disqus widgets to the article pages~~
 	* make code highlighting possible (maybe using highlight.js)
 	* decide how to include images into articles
-	* insert yandex metrika into site
+	* ~~insert yandex metrika into site~~
 	* RSS with articles
 * appearance
 	* ~~make mobile-friendly versions (smartphone and tablet)~~
@@ -22,5 +22,6 @@ Once I understand how this static site generator can better meet my needs of blo
 	* transform the whole site into repositories: content (markdown in fixed format), static engine and it's config
 * menu:
 	* decide how to automatically mark active menu points
-* deploy
+* deploy and web-server
 	* write scripts
+	* set up caching and prevent touching of not updated pages
