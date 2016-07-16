@@ -2,43 +2,43 @@ module.exports = {
     menu: [
         {
             name: "Articles",
-            link: "/articles/",
+            url: "/articles/",
 
             subs: [
                 {
                     name: "Math",
-                    link: "/articles/math/"
+                    url: "/articles/math/"
                 }
             ]
         },
 
         {
             name: "CV",
-            link: "/cv/"
+            url: "/cv/"
         },
 
         {
             name: "Projects",
-            link: "/projects/"
+            url: "/projects/"
         }
     ],
 
     external: [
         {
             name: "github",
-            link: "//github.com/oleggromov"
+            url: "//github.com/oleggromov"
         },
         {
             name: "facebook",
-            link: "//facebook.com/oleg.v.gromov"
+            url: "//facebook.com/oleg.v.gromov"
         },
         {
             name: "stackoverflow",
-            link: "//stackoverflow.com/users/1557048/oleggromov"
+            url: "//stackoverflow.com/users/1557048/oleggromov"
         },
         {
             name: "twitter",
-            link: "//twitter.com/oleggromov"
+            url: "//twitter.com/oleggromov"
         }
     ]
 };

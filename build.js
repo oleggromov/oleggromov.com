@@ -47,17 +47,18 @@ function renderFile (file, common, data, html) {
 
     var tplPath = path.resolve(config.tplPath, data.template + '.jade');
 
-    var fn = jade.compileFile(tplPath, {
+    var options = Object.assign({
         pretty: true,
         basedir: path.resolve(config.tplPath)
-    });
-
-    var html = fn({
+    }, {
         common: common,
-        data: data
+        data: data,
+        content: html
     });
 
-    createDir(file, html);
+    var compiled = jade.renderFile(tplPath, options);
+
+    createDir(file, compiled);
 }
 
 function createDir (file, html) {

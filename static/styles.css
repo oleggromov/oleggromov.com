@@ -139,6 +139,10 @@ body {
 	margin-top: 0;
 }
 
+.links__sub {
+	margin: 0 0 0.6em 0.6em;
+}
+
 .links__item {
 	display: block;
 }
