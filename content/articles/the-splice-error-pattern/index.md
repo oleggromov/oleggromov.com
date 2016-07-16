@@ -1,11 +1,7 @@
-<!---
-{
-	"date": "2016-02-09 21:00",
-	"more": "Already understood what happens?",
+date: 2016-02-09 21:00
+more: Already understood what happens?
+page: articles/item
 
-	"page": "articles/item"
-}
--->
 # The splice error pattern
 
 Imagine you’re writing an algorithm which performs looping over an array with any type of pointer (for or while loop, forEach, map etc). Each iteration the pointer moves in any direction, but you never force it to come back in the most of cases. Why should you? This mode of manipulating data is so much usual that your probably have never ever thought of its liability to hard-to-find annoying errors which will lead you toward wearing debugging!
@@ -49,6 +45,25 @@ The second approach is to lock the array like in concurrent computing until the 
 
 The third one I prefer is not to modify array’s length at all, but replace an item with undefined value instead of it. It is very simple and seems more efficient if we suppose an array could be large.
 
+
+### Fix in a functional programming manner
+
+Small discussion in twitter with [@lukaszwojciak](//twitter.com/lukaszwojciak) and [@DanShappir](//twitter.com/DanShappir) compelled me to think of an array cloning as a real option. It's said to be fast enough because arary clone makes only shallow copy leaving objects untouched and _pretty simple_, which is the most important reason one should be guided by while attempting to write good well understandable code.
+
+So the best solution looks simple:
+
+```javascript
+var arr = [1, 2, 3];
+arr.concat().forEach(act);
+
+function act(item, index) {
+	if (item) {
+		console.log(item);
+	} else {
+		arr.splice(index, 1);
+	}
+}
+```
 
 ## What do you think
 Have something to say on this erroneous pattern? Please use the comment form below to share your thoughts!

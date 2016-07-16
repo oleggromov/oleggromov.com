@@ -1,0 +1,1 @@
+My name is **Oleg Gromov**. I'm frontend developer and team lead at Yandex, Moscow. I write on my experience in programming and learning.
