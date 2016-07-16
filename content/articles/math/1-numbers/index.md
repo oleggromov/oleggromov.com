@@ -1,6 +1,6 @@
 date: 2016-02-25 21:00
 more: Read more on numbers, equations and expressions
-page: articles/item
+template: math
 
 # 1. Numbers, equations and expressions
 

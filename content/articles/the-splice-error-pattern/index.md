@@ -1,6 +1,6 @@
 date: 2016-02-09 21:00
 more: Already understood what happens?
-page: articles/item
+template: article
 
 # The splice error pattern
 

@@ -1,6 +1,6 @@
 date: 2015-02-12 23:21
 more: How to fix broken postMessage in IE 8-11
-page: articles/item
+template: article
 
 # IE postMessage between windows and tabs
 

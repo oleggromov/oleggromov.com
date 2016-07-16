@@ -1,6 +1,6 @@
 date: 2016-03-08 18:00
 more: Already understood what happens?
-page: articles/item
+template: article
 
 # Testable Modules via Dependency Injection
 
