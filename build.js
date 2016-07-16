@@ -2,9 +2,26 @@
 
 var fs = require('fs');
 var path = require('path');
-
+var extractTitle = require('./helpers/extract-title');
 
 var config = require('./config');
+
+config.build.sources.pieces.forEach(function (pattern) {
+    var glob = require('glob');
+    pattern = path.resolve(config.build.sources.base, pattern);
+
+    glob.sync(pattern).forEach(savePiece);
+});
+
+function savePiece (name) {
+    var fs = require('fs');
+    var md = require('markdown-it')();
+    var content = fs.readFileSync(name, 'utf8');
+    var file = path.parse(name);
+
+    config.common.pieces = config.common.pieces || {};
+    config.common.pieces[file.name] = md.render(content);
+}
 
 config.build.sources.list.forEach(function (pattern) {
     var glob = require('glob');
@@ -12,6 +29,7 @@ config.build.sources.list.forEach(function (pattern) {
 
     glob(pattern, {}, eachGlob);
 });
+
 
 function eachGlob (err, files) {
     if (err) {
@@ -39,11 +57,15 @@ function processFile (file, err, data) {
     var data = parsed.data;
     var html = md.render(parsed.markdown);
 
-    renderFile(file, config.common, data, html);
+    data.title = extractTitle(html);
+    data.content = html;
+
+    renderFile(file, config.common, data);
 }
 
 function renderFile (file, common, data, html) {
     var jade = require('jade');
+    var moment = require('moment');
 
     var tplPath = path.resolve(config.tplPath, data.template + '.jade');
 
@@ -53,7 +75,7 @@ function renderFile (file, common, data, html) {
     }, {
         common: common,
         data: data,
-        content: html
+        moment: moment
     });
 
     var compiled = jade.renderFile(tplPath, options);

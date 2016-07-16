@@ -6,6 +6,9 @@ module.exports = {
                 'articles/**/index.md',
                 // 'cv/index.md',
                 // 'projects/index.md'
+            ],
+            pieces: [
+                'pieces/*.md'
             ]
         },
 

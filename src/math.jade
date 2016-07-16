@@ -3,13 +3,13 @@ include /blocks/links/links
 extends /blocks/article/article
 
 block title
-	| #{title} — oleggromov.com
+	| #{data.title} — oleggromov.com
 
 block content
-	| !{content}
+	| !{data.content}
 
 block date
-	| #{data.date}
+	| #{moment(data.date).format('LLL')}
 
 block menu
 	+links(common.menu, common.external)

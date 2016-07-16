@@ -125,6 +125,10 @@ body {
 	margin: 1em 0;
 }
 
+.about__text p {
+	margin: 0;
+}
+
 .about__img {
 	display: block;
 	max-width: 100%;
@@ -140,7 +144,7 @@ body {
 }
 
 .links__sub {
-	margin: 0 0 0.6em 0.6em;
+	margin: 0 0 0 0.6em;
 }
 
 .links__item {
@@ -169,6 +173,11 @@ body {
 }
 .more__link:visited {
 	color: #2B3A42;
+}
+
+
+.footer p {
+	margin: 0;
 }
 
 .footer a {
