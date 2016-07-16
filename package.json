@@ -1,1 +1,11 @@
-{}
+{
+  "scripts": {
+    "start": "rm -rf build/*; clear; node build.js"
+  },
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "markdown-it": "^7.0.0",
+    "metamd": "^0.3.0",
+    "mkdirp": "^0.5.1"
+  }
+}
