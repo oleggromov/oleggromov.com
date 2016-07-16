@@ -1,11 +1,11 @@
 mixin links(links)
 	nav.links
 		.links__group
-			each link in links
-				if link.active
-					span.links__item.links__item_active= link.caption
-				else
-					a.links__item(href=link.url)= link.caption
+			//- each link in links
+			//- 	if link.active
+			//- 		span.links__item.links__item_active= link.caption
+			//- 	else
+			//- 		a.links__item(href=link.url)= link.caption
 
 		.links__group.links__group_external
 			a.links__item(href="//github.com/oleggromov", target="_blank") github
