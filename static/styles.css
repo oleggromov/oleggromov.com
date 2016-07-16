@@ -110,6 +110,10 @@ body {
 	margin-top: 2em;
 }
 
+.article ul li {
+	margin-top: 1em;
+}
+
 
 .about__photo {
 	overflow: hidden;
@@ -136,7 +140,7 @@ body {
 }
 
 .links__item {
-	display: inline-block;
+	display: block;
 }
 
 .links__item:link {
@@ -147,6 +151,7 @@ body {
 }
 
 .links__group_external .links__item {
+	display: inline-block;
 	margin-right: 0.6em;
 }
 
