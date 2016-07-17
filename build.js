@@ -6,15 +6,13 @@ var path = require('path');
 var extractTitle = require('./lib/extractTitle');
 var config = require('./config');
 
-var getAllFilenames = require('./lib/getAllFilenames');
 
-getAllFilenames(config.build.sources)
-    .then(function (files) {
-        console.log(files);
-    })
-    .catch(function (err) {
-        throw new Error(err);
+var getSources = require('./lib/getSources');
+getSources(config.build.sources)
+    .then(function (sources) {
+        console.log(sources);
     });
+
 
 // config.build.sources.pieces.forEach(function (pattern) {
 //     var glob = require('glob');
