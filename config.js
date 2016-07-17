@@ -2,10 +2,10 @@ module.exports = {
     build: {
         sources: {
             base: './content',
-            list: [
+            pages: [
                 'articles/**/index.md',
-                // 'cv/index.md',
-                // 'projects/index.md'
+                'cv/index.md',
+                'projects/index.md'
             ],
             pieces: [
                 'pieces/*.md'
