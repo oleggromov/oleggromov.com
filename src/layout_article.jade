@@ -12,15 +12,21 @@ html
 			aside.site__about
 				.sidebar
 					.sidebar__about
-						include /blocks/about/about
+						include about
 
 					nav.sidebar__links
 						block menu
 
 			.site__content
-				block content
+				.article
+					block content
+					.article__date.article__date_after
+						block date
+
+					.article__comments
+						include disqus
 
 			.site__footer
-				include /blocks/footer/footer
+				include footer
 
-		include /blocks/metrika/metrika
+		include metrika

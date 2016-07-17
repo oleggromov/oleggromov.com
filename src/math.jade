@@ -1,15 +1,15 @@
-include /blocks/links/links
+include links
 
-extends /blocks/article/article
+extends article
 
 block title
-	| #{data.title} — oleggromov.com
+	| #{meta.title} — oleggromov.com
 
 block content
-	| !{data.content}
+	| !{content}
 
 block date
-	| #{moment(data.date).format('LLL')}
+	| #{moment(meta.date).format('LLL')}
 
 block menu
 	+links(common.menu, common.external)
