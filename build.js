@@ -5,13 +5,24 @@ var getSources = require('./lib/getSources');
 var transformMarkdown = require('./lib/transformMarkdown');
 var splitSources = require('./lib/splitSources');
 var extractTitle = require('./lib/extractTitle');
-var render = require('./lib/render')(config.tplPath);
+var renderPage = require('./lib/renderPage')(config.tplPath);
 var writePage = require('./lib/writePage')({
-    source: config.build.sources.base,
+    source: config.build.source,
     dest: config.build.dest
 });
 
-getSources(config.build.sources)
+// var glob = require('glob');
+// var path = require('path');
+
+// glob(path.resolve(config.build.sources.base, config.build.sources.lists[0]), {}, function (err, files) {
+//     if (err) {
+//         console.warn(err);
+//     }
+
+//     console.log(files);
+// });
+
+getSources(config.build.source, config.build.sources)
     .then(processSources)
     .catch(logError);
 
@@ -22,7 +33,7 @@ function processSources (sources) {
     parts.pages.forEach(function (page) {
         page.rendered.meta.title = extractTitle(page.rendered.html);
 
-        page.rendered.fullPage = render({
+        page.rendered.fullPage = renderPage({
             tpl: page.rendered.meta.template,
             content: page.rendered.html,
             meta: page.rendered.meta,
