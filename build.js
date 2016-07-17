@@ -6,6 +6,10 @@ var transformMarkdown = require('./lib/transformMarkdown');
 var splitSources = require('./lib/splitSources');
 var extractTitle = require('./lib/extractTitle');
 var render = require('./lib/render')(config.tplPath);
+var writePage = require('./lib/writePage')({
+    source: config.build.sources.base,
+    dest: config.build.dest
+});
 
 getSources(config.build.sources)
     .then(processSources)
@@ -20,13 +24,14 @@ function processSources (sources) {
 
         page.rendered.fullPage = render({
             tpl: page.rendered.meta.template,
-            content: page.html,
+            content: page.rendered.html,
             meta: page.rendered.meta,
             common: config.common,
             pieces: parts.pieces
         });
-    });
 
+        writePage(page).then(reportSucces).catch(logError);
+    });
 }
 
 function renderMarkdown (sources) {
@@ -39,31 +44,6 @@ function logError (err) {
     console.warn(err);
 }
 
-
-
-// function createDir (file, html) {
-//     var mkdirp = require('mkdirp');
-
-//     var pagePath = path.relative(config.build.sources.base, file.dir);
-//     var buildPath = path.resolve(config.build.dest, pagePath);
-
-//     mkdirp(buildPath, writeFile.bind(undefined, buildPath, file, html));
-// }
-
-// function writeFile (buildPath, file, html, err) {
-//     if (err) {
-//         throw err;
-//     }
-
-//     var filename = path.resolve(buildPath, file.name + '.html');
-
-//     fs.writeFile(filename, html, reportSucces.bind(undefined, filename));
-// }
-
-// function reportSucces (filename, err) {
-//     if (err) {
-//         throw err;
-//     }
-
-//     console.log('written ' + path.relative(process.cwd(), filename));
-// }
+function reportSucces (filename) {
+    console.log('written ' + filename);
+}
