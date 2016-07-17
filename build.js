@@ -1,94 +1,45 @@
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-
-var extractTitle = require('./lib/extractTitle');
 var config = require('./config');
-
-
 var getSources = require('./lib/getSources');
+var transformMarkdown = require('./lib/transformMarkdown');
+var splitSources = require('./lib/splitSources');
+var extractTitle = require('./lib/extractTitle');
+var render = require('./lib/render')(config.tplPath);
+
 getSources(config.build.sources)
-    .then(function (sources) {
-        console.log(sources);
+    .then(processSources)
+    .catch(logError);
+
+function processSources (sources) {
+    renderMarkdown(sources);
+    var parts = splitSources(sources);
+
+    parts.pages.forEach(function (page) {
+        page.rendered.meta.title = extractTitle(page.rendered.html);
+
+        page.rendered.fullPage = render({
+            tpl: page.rendered.meta.template,
+            content: page.html,
+            meta: page.rendered.meta,
+            common: config.common,
+            pieces: parts.pieces
+        });
     });
 
+}
 
-// config.build.sources.pieces.forEach(function (pattern) {
-//     var glob = require('glob');
-//     pattern = path.resolve(config.build.sources.base, pattern);
+function renderMarkdown (sources) {
+    for (var key in sources) {
+        sources[key].rendered = transformMarkdown(sources[key].contents);
+    }
+}
 
-//     glob.sync(pattern).forEach(savePiece);
-// });
-
-// function savePiece (name) {
-//     var fs = require('fs');
-//     var md = require('markdown-it')();
-//     var content = fs.readFileSync(name, 'utf8');
-//     var file = path.parse(name);
-
-//     config.common.pieces = config.common.pieces || {};
-//     config.common.pieces[file.name] = md.render(content);
-// }
-
-// config.build.sources.list.forEach(function (pattern) {
-//     pattern = path.resolve(config.build.sources.base, pattern);
-
-//     glob(pattern, {}, eachGlob);
-// });
+function logError (err) {
+    console.warn(err);
+}
 
 
-// function eachGlob (err, files) {
-//     if (err) {
-//         throw err;
-//     }
-
-//     files.forEach(readFile);
-// }
-
-// function readFile (filename) {
-//     var file = path.parse(filename);
-
-//     fs.readFile(filename, 'utf8', processFile.bind(undefined, file));
-// }
-
-// function processFile (file, err, data) {
-//     var md = require('markdown-it')();
-//     var metamd = require('metamd');
-
-//     if (err) {
-//         throw err;
-//     }
-
-//     var parsed = metamd(data);
-//     var data = parsed.data;
-//     var html = md.render(parsed.markdown);
-
-//     data.title = extractTitle(html);
-//     data.content = html;
-
-//     renderFile(file, config.common, data);
-// }
-
-// function renderFile (file, common, data, html) {
-//     var jade = require('jade');
-//     var moment = require('moment');
-
-//     var tplPath = path.resolve(config.tplPath, data.template + '.jade');
-
-//     var options = Object.assign({
-//         pretty: true,
-//         basedir: path.resolve(config.tplPath)
-//     }, {
-//         common: common,
-//         data: data,
-//         moment: moment
-//     });
-
-//     var compiled = jade.renderFile(tplPath, options);
-
-//     createDir(file, compiled);
-// }
 
 // function createDir (file, html) {
 //     var mkdirp = require('mkdirp');
