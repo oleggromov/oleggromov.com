@@ -27,6 +27,8 @@ getSources(config.build.source, config.build.sources)
     .catch(logError);
 
 function processSources (sources) {
+    console.log(sources);
+
     renderMarkdown(sources);
     var parts = splitSources(sources);
 
