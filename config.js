@@ -1,25 +1,26 @@
 module.exports = {
     build: {
         sources: {
-            pages: [
+            page: [
                 'articles/**/index.md',
                 'cv/index.md',
                 'projects/index.md'
             ],
-            lists: [
+            list: [
                 'articles/math/',
                 'articles/'
             ],
-            pieces: [
+            piece: [
                 'pieces/*.md'
             ]
         },
 
-        source: './content',
-        dest: './build'
+        paths: {
+            src: './content',
+            dest: './build',
+            tpl: './src'
+        }
     },
-
-    tplPath: './src',
 
     common: require('./content/common.js')
 };
