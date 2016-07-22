@@ -3,13 +3,13 @@ include links
 extends layout_article
 
 block title
-	| #{meta.title} — oleggromov.com
+	| #{data.source.title} — oleggromov.com
 
 block content
-	| !{content}
+	| !{data.source.html}
 
 block date
-	| #{moment(meta.date).format('LLL')}
+	| #{util.moment(data.source.meta.date).format('LLL')}
 
 block menu
-	+links(common.menu, common.external)
+	+links(data.extra.common.menu, data.extra.common.external)
