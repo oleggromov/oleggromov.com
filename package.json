@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "rm -rf build/*; cp -R static build/; node build.js"
+    "start": "rm -rf build/*; cp -R static build/; node --harmony new-build.js"
   },
   "devDependencies": {
     "jade": "^1.11.0",
