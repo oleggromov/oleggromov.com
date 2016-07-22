@@ -1,5 +1,5 @@
 var resolve = require('path').resolve;
-var Colibri = require('./lib/classes/Colibri');
+var Colibri = require('./lib/Colibri');
 
 var config = require('./config');
 
