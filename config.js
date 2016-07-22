@@ -22,5 +22,7 @@ module.exports = {
         }
     },
 
-    common: require('./content/common.js')
+    extra: {
+        common: require('./content/common.js')
+    }
 };
