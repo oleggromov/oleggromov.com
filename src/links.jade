@@ -8,7 +8,9 @@ mixin links(links, external, tags)
 					nav.tags
 						span.tags__label Tags:
 						each tag in tags
-							a.tags__item(href=tag.url)= tag.name
+							a.tags__item(href=tag.url)
+								span.tags__item-name= tag.name
+								span.tags__item-count &nbsp;(#{tag.count})
 
 		.links__group.links__group_external
 			each link in external

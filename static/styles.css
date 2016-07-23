@@ -188,10 +188,15 @@ body {
 .tags__item {
 	display: inline-block;
 	margin-right: 0.6em;
+	text-decoration: none;
 }
 
 .tags__item:last-child {
 	margin-right: 0;
+}
+
+.tags__item-name {
+	text-decoration: underline;
 }
 
 
