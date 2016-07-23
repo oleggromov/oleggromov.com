@@ -1,6 +1,7 @@
 date: 2016-03-08 18:00
 more: Already understood what happens?
 template: article
+tags: testing
 
 # Testable Modules via Dependency Injection
 

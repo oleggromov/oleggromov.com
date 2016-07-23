@@ -11,10 +11,12 @@ block content
 			h1
 				a(href=page.url)= page.title
 			div.article__date #{util.moment(page.date).format('LLL')}
-			div.article__tags
-				if page.getTags()
-					span.article__tag Tags:&nbsp;
-						span= page.getTags()
+			if page.tags
+				div.article__tags
+					| Tags:
+					for tag in page.tags
+						span.article__tags-item
+							a(href=tag.url)= tag.name
 			| !{page.preview}
 
 			p.more

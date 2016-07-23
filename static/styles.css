@@ -60,6 +60,14 @@ body {
 	margin-top: 0;
 }
 
+.article__tags {
+	margin: 0;
+}
+
+.article__tags-item {
+	margin-left: 0.6em;
+}
+
 .article__item {
 }
 
