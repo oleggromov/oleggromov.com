@@ -1,7 +1,6 @@
 date: 2016-02-09 21:00
 more: Already understood what happens?
 template: article
-tags: learning
 
 # The splice error pattern
 
