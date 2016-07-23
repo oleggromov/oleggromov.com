@@ -6,14 +6,14 @@ module.exports = {
                 'cv/index.md',
                 'projects/index.md'
             ],
-            list: [
-                'articles/math/',
-                'articles/'
-            ],
             piece: [
                 'pieces/*.md'
             ]
         },
+
+        lists: [
+            'articles/'
+        ],
 
         paths: {
             content: './content',
