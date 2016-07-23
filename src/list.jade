@@ -1,20 +1,24 @@
-include /blocks/links/links
+include links
 
-extends /blocks/site/site
+extends layout_site
 
 block title
 	| Oleg Gromov
 
 block content
-	each article in articles
+	each page in data.pages
 		article.article
 			h1
-				a(href=article.url)= article.title
-			div.article__date= article.date
-			| !{article.preview}
+				a(href=page.url)= page.title
+			div.article__date #{util.moment(page.date).format('LLL')}
+			div.article__tags
+				if page.getTags()
+					span.article__tag Tags:&nbsp;
+						span= page.getTags()
+			| !{page.preview}
 
 			p.more
-				a.more__link(href=article.url)= article.more
+				a.more__link(href=page.url)= page.more
 
 block menu
-	+links(menu)
+	+links(data.extra.common.menu, data.extra.common.external, data.tags)
