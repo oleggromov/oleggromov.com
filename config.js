@@ -3,8 +3,8 @@ module.exports = {
         sources: {
             page: [
                 'articles/**/index.md',
-                'cv/index.md',
-                'projects/index.md'
+                // 'cv/index.md',
+                // 'projects/index.md'
             ],
             piece: [
                 'pieces/*.md'

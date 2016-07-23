@@ -7,15 +7,15 @@ module.exports = {
             tags: true
         },
 
-        {
-            name: "CV",
-            url: "/cv/"
-        },
+        // {
+        //     name: "CV",
+        //     url: "/cv/"
+        // },
 
-        {
-            name: "Projects",
-            url: "/projects/"
-        }
+        // {
+        //     name: "Projects",
+        //     url: "/projects/"
+        // }
     ],
 
     external: [
