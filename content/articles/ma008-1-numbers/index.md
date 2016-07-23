@@ -1,6 +1,7 @@
 date: 2016-02-25 21:00
 more: Read more on numbers, equations and expressions
-template: math
+template: article
+tags: math, learning
 
 # 1. Numbers, equations and expressions
 
