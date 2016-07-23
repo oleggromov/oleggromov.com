@@ -15,6 +15,8 @@ module.exports = {
             'articles/'
         ],
 
+        tagBase: 'articles/tag',
+
         paths: {
             content: './content',
             build: './build',

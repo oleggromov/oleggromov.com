@@ -151,11 +151,18 @@ body {
 	display: block;
 }
 
-.links__item:link {
+.tags__item,
+.links__item {
 	color: #FF530D;
 }
+.tags__item:visited,
 .links__item:visited {
 	color: #2B3A42;
+}
+
+.tags__item:hover,
+.links__item:hover {
+	color: #FF860D;
 }
 
 .links__group_external .links__item {
@@ -165,6 +172,26 @@ body {
 
 .links__item_active {
 	font-weight: bold;
+}
+
+
+
+.tags {
+	margin: 0 0 0.6em 0.6em;
+
+}
+
+.tags__label {
+	margin-right: 0.6em;
+}
+
+.tags__item {
+	display: inline-block;
+	margin-right: 0.6em;
+}
+
+.tags__item:last-child {
+	margin-right: 0;
 }
 
 

@@ -12,4 +12,4 @@ block date
 	| #{util.moment(data.source.meta.date).format('LLL')}
 
 block menu
-	+links(data.extra.common.menu, data.extra.common.external)
+	+links(data.extra.common.menu, data.extra.common.external, data.tags)

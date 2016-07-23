@@ -1,13 +1,14 @@
-mixin links(links, external)
+mixin links(links, external, tags)
 	nav.links
 		.links__group
 			each link in links
 				a.links__item(href=link.url)= link.name
 
-				if link.subs
-					nav.links__sub
-						each sub in link.subs
-							a.links__item(href=sub.url)= sub.name
+				if link.tags
+					nav.tags
+						span.tags__label Tags:
+						each tag in tags
+							a.tags__item(href=tag.url)= tag.name
 
 		.links__group.links__group_external
 			each link in external

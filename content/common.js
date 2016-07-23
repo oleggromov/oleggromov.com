@@ -4,12 +4,7 @@ module.exports = {
             name: "Articles",
             url: "/articles/",
 
-            subs: [
-                {
-                    name: "Math",
-                    url: "/articles/math/"
-                }
-            ]
+            tags: true
         },
 
         {
