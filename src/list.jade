@@ -1,4 +1,5 @@
 include links
+include tags
 
 extends layout_site
 
@@ -12,11 +13,7 @@ block content
 				a(href=page.url)= page.title
 			div.article__date #{util.moment(page.date).format('LLL')}
 			if page.tags
-				div.article__tags
-					| Tags:
-					for tag in page.tags
-						span.article__tags-item
-							a(href=tag.url)= tag.name
+				+tags(page.tags)
 			| !{page.preview}
 
 			p.more
