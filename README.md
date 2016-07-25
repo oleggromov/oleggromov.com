@@ -25,3 +25,4 @@ Once I understand how this static site generator can better meet my needs of blo
 * deploy and web-server
 	* write scripts
 	* set up caching and prevent touching of not updated pages
+	* make an url diff checker to check if all of the urls originally placed on the site are still present after the deploy
