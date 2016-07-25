@@ -24,6 +24,23 @@ module.exports = {
         }
     },
 
+    menu: [
+        {
+            name: 'Articles',
+            url: '/articles',
+
+            tags: true
+        },
+        {
+            name: 'Projects',
+            url: '/projects'
+        },
+        {
+            name: 'CV',
+            url: '/cv'
+        }
+    ],
+
     extra: {
         common: require('./content/common.js')
     }

@@ -2,7 +2,10 @@ mixin links(links, external, tags)
 	nav.links
 		.links__group
 			each link in links
-				a.links__item(href=link.url)= link.name
+				if link.isCurrent
+					span.links__item.links__item_active= link.name
+				else
+					a.links__item(href=link.url, class=link.isSection ? 'links__item_active' : '')= link.name
 
 				if link.tags
 					nav.tags

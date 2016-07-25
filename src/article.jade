@@ -17,4 +17,4 @@ block date
 	| #{util.moment(data.page.date).format('LLL')}
 
 block menu
-	+links(data.extra.common.menu, data.extra.common.external, data.tags)
+	+links(data.menu, data.extra.common.external, data.tags)

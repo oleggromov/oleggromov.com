@@ -1,23 +1,4 @@
 module.exports = {
-    menu: [
-        {
-            name: "Articles",
-            url: "/articles/",
-
-            tags: true
-        },
-
-        // {
-        //     name: "CV",
-        //     url: "/cv/"
-        // },
-
-        // {
-        //     name: "Projects",
-        //     url: "/projects/"
-        // }
-    ],
-
     external: [
         {
             name: "github",
