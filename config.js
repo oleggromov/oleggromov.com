@@ -1,6 +1,6 @@
 module.exports = {
     build: {
-        sources: {
+        content: {
             page: [
                 'articles/**/index.md',
                 // 'cv/index.md',
