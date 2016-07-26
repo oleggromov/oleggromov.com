@@ -1,0 +1,23 @@
+mixin links(links, external, tags)
+	nav.links
+		.links__group
+			each link in links
+				if link.isCurrent
+					span.links__item.links__item_active= link.name
+				else
+					a.links__item(href=link.url, class=link.isSection ? 'links__item_active' : '')= link.name
+
+				if link.tags
+					nav.tags
+						span.tags__label Tags:
+						each tag in tags
+							a.tags__item(href=tag.url)
+								span.tags__item-name= tag.name
+								span.tags__item-count &nbsp;(#{tag.count})
+
+		.links__group.links__group_external
+			each link in external
+				a.links__item(href=link.url)= link.name
+
+		//- .links__group
+			a.links__item(href="mailto:hi@oleggromov.com") hi@oleggromov.com

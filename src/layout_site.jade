@@ -1,0 +1,26 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		title
+			block title
+
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="/static/styles.css")
+	body
+		.site
+			aside.site__about
+				.sidebar
+					.sidebar__about
+						include about
+
+					nav.sidebar__links
+						block menu
+
+			.site__content
+				block content
+
+			.site__footer
+				include footer
+
+		include metrika

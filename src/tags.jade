@@ -1,0 +1,6 @@
+mixin tags (tags)
+	div.article__tags
+		| Tags:
+		for tag in tags
+			span.article__tags-item
+				a(href=tag.url)= tag.name

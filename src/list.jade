@@ -1,0 +1,23 @@
+include links
+include tags
+
+extends layout_site
+
+block title
+	| Oleg Gromov
+
+block content
+	each page in data.pages
+		article.article
+			h1
+				a(href=page.url)= page.title
+			div.article__date #{util.moment(page.date).format('LLL')}
+			if page.tags
+				+tags(page.tags)
+			| !{page.preview}
+
+			p.more
+				a.more__link(href=page.url)= page.more
+
+block menu
+	+links(data.menu, data.extra.common.external, data.tags)

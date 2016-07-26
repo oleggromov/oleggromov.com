@@ -1,0 +1,20 @@
+include links
+include tags
+
+extends layout_article
+
+block title
+	| #{data.page.title} — oleggromov.com
+
+block content
+	| !{data.page.html}
+
+block tags
+	if data.page.tags
+		+tags(data.page.tags)
+
+block date
+	| #{util.moment(data.page.date).format('LLL')}
+
+block menu
+	+links(data.menu, data.extra.common.external, data.tags)
