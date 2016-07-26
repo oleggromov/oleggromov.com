@@ -31,14 +31,14 @@ module.exports = {
 
             tags: true
         },
-        {
-            name: 'Projects',
-            url: '/projects'
-        },
-        {
-            name: 'CV',
-            url: '/cv'
-        }
+        // {
+        //     name: 'Projects',
+        //     url: '/projects'
+        // },
+        // {
+        //     name: 'CV',
+        //     url: '/cv'
+        // }
     ],
 
     extra: {
