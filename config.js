@@ -12,7 +12,7 @@ module.exports = {
         },
 
         lists: [
-            'articles/'
+            '/articles/'
         ],
 
         tagBase: 'articles/tag',
