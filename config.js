@@ -15,7 +15,7 @@ module.exports = {
             '/articles/'
         ],
 
-        tagBase: 'articles/tag',
+        tagBaseUrl: '/articles/tag',
 
         paths: {
             content: './content',
