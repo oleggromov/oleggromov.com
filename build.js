@@ -1,6 +1,4 @@
-var resolve = require('path').resolve;
-var Colibri = require('./lib/Colibri');
-
+var Oxypogon = require('oxypogon');
 var config = require('./config');
 
-new Colibri(config);
+new Oxypogon(config);
