@@ -7,14 +7,16 @@ block title
 	| #{data.page.title} — oleggromov.com
 
 block content
-	| !{data.page.html}
+	h1= data.page.title
 
-block tags
+	.article__date.article__date_after
+		| #{util.moment(data.page.date).format('LLL')}
+
 	if data.page.tags
-		+tags(data.page.tags)
+		.article__tags
+			+tags(data.page.tags)
 
-block date
-	| #{util.moment(data.page.date).format('LLL')}
+	| !{data.page.html}
 
 block menu
 	+links(data.menu, data.extra.common.external, data.tags)
