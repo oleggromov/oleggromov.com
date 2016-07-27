@@ -7,7 +7,7 @@ mixin links(links, external, tags)
 				else
 					a.links__item(href=link.url, class=link.isSection ? 'links__item_active' : '')= link.name
 
-				if link.tags
+				if link.tags && tags.length
 					nav.tags
 						span.tags__label Tags:
 						each tag in tags
