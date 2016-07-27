@@ -50,7 +50,7 @@ console.log(arr);
 > [1, 2, 3];
 ```
 
-As the `filter` method decides wheter to keep or to delete each item on the callback return value, we simply return `false` for falsy arry items.
+As the `filter` method decides wheter to keep or to delete each item on the callback return value, we simply return `false` for falsy array items.
 
 ## Quick fix
 
