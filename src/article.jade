@@ -9,8 +9,8 @@ block title
 block content
 	h1= data.page.title
 
-	.article__date.article__date_after
-		| #{util.moment(data.page.date).format('LLL')}
+	.article__date
+		| #{util.moment(data.page.date).format('LL')}
 
 	if data.page.tags
 		.article__tags
