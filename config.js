@@ -22,6 +22,10 @@ module.exports = {
         }
     },
 
+    buildConfig: {
+        previewSize: 3,
+    },
+
     menu: [
         {
             name: 'Articles',

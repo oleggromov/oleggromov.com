@@ -140,6 +140,10 @@ a:hover {
 	color: #3F5765;
 }
 
+.article__date_preview {
+	margin-bottom: 1em;
+}
+
 .article p {
 	margin: 0.5em 0;
 	line-height: 1.5;

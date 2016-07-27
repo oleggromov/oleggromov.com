@@ -11,7 +11,7 @@ block content
 		article.article
 			h1
 				a(href=page.url)= page.title
-			div.article__date #{util.moment(page.date).format('LL')}
+			div.article__date.article__date_preview #{util.moment(page.date).format('LL')}
 			if page.tags
 				+tags(page.tags)
 			| !{page.preview}
