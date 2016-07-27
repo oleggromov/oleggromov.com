@@ -17,7 +17,7 @@ mixin links(links, external, tags)
 
 		.links__group.links__group_external
 			each link in external
-				a.links__item(href=link.url)= link.name
+				a.links__item(href=link.url, target='_blank')= link.name
 
 		//- .links__group
 			a.links__item(href="mailto:hi@oleggromov.com") hi@oleggromov.com
