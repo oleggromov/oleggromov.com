@@ -34,6 +34,24 @@ The new version of act will print an element if it exists but also take care of 
 
 My guess is you’ve already understood what happens in that case. The forEach method implicitly (or for loop explicitly in turn) moves the iterator over an elements of array, counting from the first one to the last one. Until we have an array of truthy values nothing can happen with the defined above function. But a single element will be skipped for each falsy one in an array! The act method called on the [1, undefined, 3, 4, undefined, 5] array will only log «1» and «4» because it latently moves the pointer as often as encounters an empty element by deleting it, and thus changes the array length and omits an item.
 
+## The only possible fix
+
+**Warning!** All this stuff written above and below can originate only from the misunderstanding of `forEach`. The correct and, I claim, the _only fix that is worth knowing of_ is to not modify any array from within a `forEach` loop. There're modifying methods of arrays that should be used in similar cases: `filter`, `map`, `reduce`.
+
+The code above should be rewritten in the following manner:
+
+```javascript
+var arr = [1, 2, undefined, 3];
+arr = arr.filter(item => {
+	console.log(item);
+	return Boolean(item);
+});
+
+console.log(arr);
+> [1, 2, 3];
+```
+
+As the `filter` method decides wheter to keep or to delete each item on the callback return value, we simply return `false` for falsy arry items.
 
 ## Quick fix
 
