@@ -149,6 +149,11 @@ a:hover {
 	line-height: 1.5;
 }
 
+.article img {
+	margin: 0.5em -0px;
+	max-width: 100%;
+}
+
 .article__paragraph,
 .article__more {
 	display: block;
