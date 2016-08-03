@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "rm -rf build/*; cp -R static build/; node --harmony build.js"
+    "build": "rm -rf build/*; cp -R static build/; node --harmony build.js",
+    "publish": "npm run build && bash publish.sh"
   },
   "devDependencies": {
     "oxypogon": "^0.1.2"
