@@ -32,4 +32,4 @@ I often used to say “I don't like movies because they're just loss of time“,
 
 ## Why did I publish this list
 
-I'm learning English, and unfortunately I cannot understand spoken language well enough yet to see feature movies with original audio without constantly starting at the subtitles. My writing skills are also lame in both legs, therefore I hope those bookmarks will not only help you to find something worthy but also serve me in practicing writing.
+I'm learning English, and unfortunately I cannot understand spoken language well enough yet to see feature movies with original audio without constantly staring at the subtitles. My writing skills are also lame in both legs, therefore I hope those bookmarks will not only help you to find something worthy but also serve me in practicing writing.
