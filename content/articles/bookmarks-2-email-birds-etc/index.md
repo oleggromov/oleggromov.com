@@ -4,7 +4,7 @@ template: article
 
 # Bookmarks #2
 
-This week's bookmarks list can be way more interesting for programmers than the previous one because there's one very interesting historical narration and some links about front-end development. There're also some links for those who like science and is interested in world's experience of avoiding traffic junks.
+This week's bookmarks list can be way more interesting for programmers than the previous one because there's one very interesting historical narration and some links about front-end development. There're also some links for those who like science and is interested in world's experience of avoiding traffic jams.
 
 ## The History of Electronic Mail, by *Tom Van Vleck*
 
@@ -41,7 +41,7 @@ All of those and many other people, discussions and systems were involved in a l
 
 ## Non-programming stuff
 
-* [Guys from China made a prototype of the bus that goes above the main traffic and can therefore pass by traffic junks](http://gizmodo.com/china-actually-built-that-crazy-traffic-straddling-bus-1784724612). I'm pretty sure that the right way of removing traffic junks is to make owning a car in a megapolis rather expensive and the public transportation enough effective, so people will decide to choose the latter. This bus is a great idea for increasing effectiveness of public transport, but I'm very curious about the method of turning the corners.
+* [Guys from China made a prototype of the bus that goes above the main traffic and can therefore pass by traffic jams](http://gizmodo.com/china-actually-built-that-crazy-traffic-straddling-bus-1784724612). I'm pretty sure that the right way of removing traffic jams is to make owning a car in a megapolis rather expensive and the public transportation enough effective, so people will decide to choose the latter. This bus is a great idea for increasing effectiveness of public transport, but I'm very curious about the method of turning the corners.
 
 * [London physicists coupled electron and photon](http://phys.org/news/2016-08-scientists-previously-unknown.html). An interesting writing that describes the coupled photon and electron. Besides the curiosity to characteristics of matter and some practical applications (electron and photon being bounded together share some of each other's properties making it possible things like circuit conductor imperfection), this will allow scientists to study quantum effects and interactions at room temperature.
 
