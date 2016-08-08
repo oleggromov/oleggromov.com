@@ -9,6 +9,10 @@ module.exports = {
             ]
         },
 
+        copy: [
+            'articles/**/*.jpg'
+        ],
+
         lists: [
             '/articles/'
         ],

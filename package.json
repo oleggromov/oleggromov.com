@@ -4,6 +4,6 @@
     "publish": "npm run build && bash publish.sh"
   },
   "devDependencies": {
-    "oxypogon": "^0.1.2"
+    "oxypogon": "^0.2.0"
   }
 }

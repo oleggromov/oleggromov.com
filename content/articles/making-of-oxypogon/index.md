@@ -1,4 +1,4 @@
-date: 2016-08-03 22:00
+date: 2016-08-07 19:00
 more:
 template: article
 
@@ -6,13 +6,13 @@ template: article
 
 Originally the idea of blogging and, afterwards, the idea of creating simple blogging system called _Colibri_ emerged in my mind back in 2009 year as far as I remember. Probably there was nothing interesting in my experience that days to be shared with anyone, but the idea itself seemed to be interesting (make some system from scratch) and useful (get a blogging engine as a result).
 
-![Oxypogon](https://cloud.githubusercontent.com/assets/2196347/17130607/74000fb2-532a-11e6-9ed4-dc604296367c.jpg)
+![Oxypogon](oxypogon-the-bird.jpg)
 
 I started with just a blueprint in a form of written high-level description of the system and ended at the same point without any further development. Actually I didn't have enough motivation to write a blog and especially building a blog engine that time.
 
 During those years I returned to the idea a few times: created some versions of this site (sometimes I will definitely find them and publish in the archive) and wrote some articles, maintained a [livejournal-based blog by the name of rawgift](http://rawgift.livejournal.com/) in Russian. But all of those attempts failed for some reason.
 
-Years later, in the early 2015th, I created the first version of this blog using a [bunch of gulp-based scripts](https://github.com/oleggromov/oleggromov.com/tree/613fb2c6cb626f8bed88c5831bbf341f87317e65). Gulp was very familiar to me and in fact the only well-known Node.js utility. The biggest gulp task looked like this:
+Years later, in the early 2015<sup>th</sup>, I created the first version of this blog using a [bunch of gulp-based scripts](https://github.com/oleggromov/oleggromov.com/tree/613fb2c6cb626f8bed88c5831bbf341f87317e65). Gulp was very familiar to me and in fact the only well-known Node.js utility. The biggest gulp task looked like this:
 
 ```
 gulp.task('index', function() {
