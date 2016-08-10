@@ -4,13 +4,13 @@ template: article
 
 # Making of Oxypogon.js, the static blog generator
 
-Originally the idea of blogging and, afterwards, the idea of creating simple blogging system called _Colibri_ emerged in my mind back in 2009 year as far as I remember. Probably there was nothing interesting in my experience that days to be shared with anyone, but the idea itself seemed to be interesting (make some system from scratch) and useful (get a blogging engine as a result).
+Originally the idea of blogging and, afterwards, the idea of creating simple blogging system called _Colibri_ emerged in my mind back in 2009 year as far as I remember. Probably there was nothing interesting in my experience that days to share with anyone, but the idea itself seemed to be interesting (make a system from scratch) and useful (get a blogging engine as a result).
 
 ![Oxypogon](oxypogon-the-bird.jpg)
 
 I started with just a blueprint in a form of written high-level description of the system and ended at the same point without any further development. Actually I didn't have enough motivation to write a blog and especially building a blog engine that time.
 
-During those years I returned to the idea a few times: created some versions of this site (sometimes I will definitely find them and publish in the archive) and wrote some articles, maintained a [livejournal-based blog by the name of rawgift](http://rawgift.livejournal.com/) in Russian. But all of those attempts failed for some reason.
+During those years I returned to the idea a few times: created some versions of this site (sometimes I will definitely find them all and publish in the archive) and wrote some articles, maintained a [livejournal-based blog by the name of rawgift](http://rawgift.livejournal.com/) in Russian. But all of those attempts failed for some reason resulting with no blog that had sustained for a while.
 
 Years later, in the early 2015<sup>th</sup>, I created the first version of this blog using a [bunch of gulp-based scripts](https://github.com/oleggromov/oleggromov.com/tree/613fb2c6cb626f8bed88c5831bbf341f87317e65). Gulp was very familiar to me and in fact the only well-known Node.js utility. The biggest gulp task looked like this:
 
@@ -45,7 +45,7 @@ gulp.task('index', function() {
 });
 ```
 
-And the remaining code was more or less like a mess of configuration, ambiguous gulp plugins' calls mixed with file paths and weird processings of the intermediate data being in an unpredictable form and state — connected all together by gulp piping. I decided to take some parts away by moving the processing functions into `helpers/` directory like modules-functions to add some accuracy and tidiness. This helped a little. I just got files like `helpers/previews/index.js`:
+And the remaining code was more or less like a mess of configuration, ambiguous gulp plugins' calls mixed with file paths and weird processings of the intermediate data being in an unpredictable form and state — connected all together by gulp piping. I decided to take some parts away by moving the processing functions into `helpers/` directory to add some accuracy and tidiness. This helped a little. I just got files like `helpers/previews/index.js`:
 
 ```
 var through = require('through2');
@@ -88,18 +88,29 @@ module.exports.getList = function(previews) {
 
 Which in turn was messy, required other helpers and, even worse, obscure modules and checks in code required for any gulp plugin to work. This was a hell in essence but it helped me to build first quite modern version of my blog, publish it and forget about the idea and its terrible realization for year.
 
-As was mentioned above, initially I found “Colibri” fitting my idea of simple and lightweight engine very well as it's known its tiny little size and startling wing swinging speed. Eventually this name proved to be taken at least on the npm registry and I decided to change it.
+## Stop! Why not existing solutions like Docpad, Hexo?
 
-Next I found a list of different humminbirds on the Wikipedia (I won't share it with you because there're too many perfect names for my further projects), chosen the most severe and a bit grumpy one (I think it a bit like me) and named the project in honor of it. **Oxypogon!** I guess it should be pronounced as “aksi-pa-gen” or something similar, but I'm not sure. Furthermore Oxypogon is a very beautiful bird (you can see its picture at the top) and I humbly hope my code to be of the same quaility ultimately.
+Certainly I've heard about existing static blogging engines. The first I've heard about was [_Docpad_ described in Sergey Chikuyonok's article](http://chikuyonok.ru/2013/02/docpad/) (in Russian). Sergey tells about configuring Docpad and setting up needed plugins to generate menu and assemble static files with _grunt_.
 
-## Stop! Why not existing solutions?
+I don't actually remember the reasons to refuse Docpad usage. Now it seems to be rather similar to Oxypogon. But looking at the documentation and [begginer's guide](http://docpad.org/docs/begin) I guess the complexity was the reason to throw away the idea of using Docpad. Is uses complicated abstractions like blocks, collections, discourages you with many different plugins and unclear building steps... Stop! This seems to be kind of fault finding that is definitely not in list of my goals. The only thing I'd like to illuminate is the complexity of Docpad's realization over the simple and powerful idea of processing markdown sources to static HTML files combined with some CSS and Javascript.
 
-Hexo, docpad...
+Ultimately I dropped the idea of using Docpad in favor of the mentioned above bunch of gulp plugins. Not too wise decision, isn't it?
 
-## The first incarnation — gulp
+The next candidate for building my static dream website with a blog was _Hexo_. I've heard about it before but never tried. Once the time has come and I started a new iteration of looking for an engine I've found the [list of static site generators on somebody's github](https://gist.github.com/davatron5000/2254924) and started to try them. I found _Blacksmith_, _Wintersmith_ a few other _something-smiths_ but all of them failed to work for some reason. I just created a temporary folder `/tpm/blog`, installed another one generator and in 5 to 10 minutes removed it forever because of unclear behavior in some case.
+
+Then, lost in the comments below, I found Hexo. Compared to other projects it was well-maintained, had a few thousand stars on github and was documented in detail and in a friendly manner. I definitely gave it a try that day but eventually thrown away even it despite its documentation and community. Maybe I've already had my own vision of working with a statically assembled website or just have got tired of seeing into unfamiliar technologies... Who can remember now.
+
+After all these tries and in a year and a half passed I returned to the idea of building my own static site generator. I called to memory those _Colibri_ blueprints and found the idea to still be of my current interest.
 
 ## Transition to procedural-modular version
 
 ## Eventually well defined system built on classes
+
+## Naming
+
+As was mentioned above, initially I found “Colibri” fitting my idea of simple and lightweight engine very well as it's known its tiny little size and startling wing swinging speed. Eventually this name proved to be taken at least on the npm registry and I decided to change it.
+
+Next I found a list of different humminbirds on the Wikipedia (I won't share it with you because there're too many perfect names for my further projects), chosen the most severe and a bit grumpy one (I think it a bit like me) and named the project in honor of it. **Oxypogon!** I guess it should be pronounced as “aksi-pa-gen” or something similar, but I'm not sure. Furthermore Oxypogon is a very beautiful bird (you can see its picture at the top) and I humbly hope my code to be of the same quaility ultimately.
+
 
 ## Future plans and current flaws
