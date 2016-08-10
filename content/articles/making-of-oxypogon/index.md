@@ -102,7 +102,15 @@ Then, lost in the comments below, I found Hexo. Compared to other projects it wa
 
 After all these tries and in a year and a half passed I returned to the idea of building my own static site generator. I called to memory those _Colibri_ blueprints and found the idea to still be of my current interest.
 
+## First publication
+
+Oxypogon's history is tightly coupled with my website's story. I tried to write something useful (or just for fun) a few times and all those times I failed to proceed for some significant amount of time. The last publication happend one year later, on February 2016, when I [finished some scripts, made a mobile-friendly version, wrote the first article](https://github.com/oleggromov/oleggromov.com/tree/dd94f46a99db0fc38d1d0320022c3092d95c69b2) and published this mess as a website.
+
+The [incomplete second article about IE postMessage-ing between tabs and windows](https://github.com/oleggromov/oleggromov.com/blob/dd94f46a99db0fc38d1d0320022c3092d95c69b2/src/content/articles/ie-postmessage-between-windows-and-tabs/index.md) was also published by mistake — but was never finished. Eventually I decided to delete it insted of finishing. If you're interested in the subject please drop a line in comments and we'll have a discussion on the topic. Maybe I can help.
+
 ## Transition to procedural-modular version
+
+
 
 ## Eventually well defined system built on classes
 
