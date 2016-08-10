@@ -12,7 +12,7 @@ I started with just a blueprint in a form of written high-level description of t
 
 During those years I returned to the idea a few times: created some versions of this site (sometimes I will definitely find them all and publish in the archive) and wrote some articles, maintained a [livejournal-based blog by the name of rawgift](http://rawgift.livejournal.com/) in Russian. But all of those attempts failed for some reason resulting with no blog that had sustained for a while.
 
-Years later, in the early 2015<sup>th</sup>, I created the first version of this blog using a [bunch of gulp-based scripts](https://github.com/oleggromov/oleggromov.com/tree/613fb2c6cb626f8bed88c5831bbf341f87317e65). Gulp was very familiar to me and in fact the only well-known Node.js utility. The biggest gulp task looked like this:
+Years later, in the early 2015, I created the first version of this blog using a [bunch of gulp-based scripts](https://github.com/oleggromov/oleggromov.com/tree/613fb2c6cb626f8bed88c5831bbf341f87317e65). Gulp was very familiar to me and in fact the only well-known Node.js utility. The biggest gulp task looked like this:
 
 ```
 gulp.task('index', function() {
