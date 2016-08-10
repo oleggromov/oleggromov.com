@@ -108,6 +108,8 @@ Oxypogon's history is tightly coupled with my website's story. I tried to write 
 
 The [incomplete second article about IE postMessage-ing between tabs and windows](https://github.com/oleggromov/oleggromov.com/blob/dd94f46a99db0fc38d1d0320022c3092d95c69b2/src/content/articles/ie-postmessage-between-windows-and-tabs/index.md) was also published by mistake — but was never finished. Eventually I decided to delete it insted of finishing. If you're interested in the subject please drop a line in comments and we'll have a discussion on the topic. Maybe I can help.
 
+Unfortunately there was no croud roaring and celebrating the first publication. Only the collegue of mine from Yandex [Ivan Bessarabov made a PR adding RSS support to the ToDo list](https://github.com/oleggromov/oleggromov.com/pull/1). Thank you, Ivan, for the contribution and concernment about my facility! [Your wish is still on the Oxypogon's todo list](https://github.com/oleggromov/oxypogon/tree/f7748036c0e00ee39142ba884d9ed41640c8bb24#todo) and I hope I can fulfill it soon as the new arcitecture of the system makes adding such additions painlessly without any significant effort.
+
 ## Transition to procedural-modular version
 
 
