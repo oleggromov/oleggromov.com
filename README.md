@@ -3,7 +3,6 @@ This is my personal site's source code. It is generated using Oxypogon.js, the [
 
 ## TODO
 * functionality
-	* decide how to include images into articles
 	* RSS with articles
 * appearance
 	* find an appropriate style (fonts, spacing etc)
