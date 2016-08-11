@@ -16,3 +16,6 @@ This pattern is recommended to be used in distributed systems but it's pretty cl
 * [Microsoft's “Pipes and Filters” article on MSDN](https://msdn.microsoft.com/en-us/library/dn568100.aspx)
 * [Pipe-and-Filter, by *Dossier Andreas*](http://www.dossier-andreas.net/software_architecture/pipe_and_filter.html)
 
+## Beautiful
+
+[https://www.oldnyc.org/](Map of New York City historical photographs). Looks very interesting, I wonder if someone ever make such a map for my home city and for the places where I grew in particular. Via [https://twitter.com/bobuk](@bobuk).
