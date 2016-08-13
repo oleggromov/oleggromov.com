@@ -13,6 +13,8 @@ module.exports = {
             '/articles/'
         ],
 
+        copy: [],
+
         tagBaseUrl: '/articles/tag',
 
         paths: {
