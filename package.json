@@ -1,9 +1,8 @@
 {
   "scripts": {
-    "build": "rm -rf build/*; cp -R static build/; node --harmony build.js",
+  	"oxypogon": "$(npm bin)/oxypogon",
+    "build": "rm -rf build/*; cp -R static build/; npm run oxypogon -- build",
+    "watch": "npm run oxypogon -- watch",
     "publish": "npm run build && bash publish.sh"
-  },
-  "devDependencies": {
-    "oxypogon": "^0.1.2"
   }
 }
