@@ -1,9 +1,13 @@
 {
   "scripts": {
     "build": "rm -rf build/*; cp -R static build/; node --harmony build.js",
+    "watch": "node --harmony watch.js",
     "publish": "npm run build && bash publish.sh"
   },
   "devDependencies": {
     "oxypogon": "^0.1.2"
+  },
+  "dependencies": {
+    "yargs": "^4.8.1"
   }
 }

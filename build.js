@@ -1,4 +1,5 @@
 var Oxypogon = require('../oxypogon');
 var config = require('./config');
 
-new Oxypogon(config);
+var oxypogon = new Oxypogon(config);
+oxypogon.build();
