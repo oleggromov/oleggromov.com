@@ -1,5 +1,5 @@
-date: 2016-08-17 22:00
-more: Proceed to a huge list of outlines for web apps, some handy rules of code deduplication, automated testing, CSS and variable declaration in JavaScript
+date: 2016-08-18 11:00
+more: Proceed to a huge list of notes on web apps, automated testing, CSS, variable declaration types in JavaScript and so on
 template: article
 
 # Developer's bookmarks #1: progressive web apps, automated testing pyramid, thoughts about good code and some CSS fun
