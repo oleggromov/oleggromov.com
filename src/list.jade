@@ -10,7 +10,7 @@ block content
 	each page in data.pages
 		article.article
 			h1
-				a(href=page.url)= page.title
+				a(href=page.url)!= page.title
 			div.article__date.article__date_preview #{util.moment(page.date).format('LL')}
 			if page.tags
 				+tags(page.tags)
