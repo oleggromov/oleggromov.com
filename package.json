@@ -1,6 +1,6 @@
 {
   "scripts": {
-  	"oxypogon": "$(npm bin)/oxypogon",
+    "oxypogon": "$(npm bin)/oxypogon",
     "build": "rm -rf build/*; cp -R static build/; npm run oxypogon -- build",
     "watch": "npm run oxypogon -- watch",
     "publish": "npm run build && bash publish.sh"
