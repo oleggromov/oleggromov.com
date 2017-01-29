@@ -2,7 +2,7 @@ module.exports = {
     build: {
         content: {
             page: [
-                'articles/**/index.md'
+                'notes/**/index.md'
             ],
             piece: [
                 'pieces/*.md'
@@ -10,12 +10,13 @@ module.exports = {
         },
 
         lists: [
-            '/articles/'
+            '/',
+            '/notes/'
         ],
 
         copy: [],
 
-        tagBaseUrl: '/articles/tag',
+        tagBaseUrl: '/notes/tag',
 
         paths: {
             content: './content',
@@ -25,13 +26,13 @@ module.exports = {
     },
 
     buildConfig: {
-        previewSize: 3,
+        previewSize: 2,
     },
 
     menu: [
         {
-            name: 'Articles',
-            url: '/articles',
+            name: 'Notes',
+            url: '/notes',
 
             tags: true
         }
