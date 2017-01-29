@@ -2,19 +2,23 @@ module.exports = {
     external: [
         {
             name: "github",
-            url: "//github.com/oleggromov"
+            url: "https://github.com/oleggromov"
         },
         {
             name: "facebook",
-            url: "//facebook.com/oleg.v.gromov"
+            url: "https://facebook.com/oleg.v.gromov"
         },
         {
             name: "stackoverflow",
-            url: "//stackoverflow.com/users/1557048/oleggromov"
+            url: "https://stackoverflow.com/users/1557048/oleggromov"
         },
         {
             name: "twitter",
-            url: "//twitter.com/oleggromov"
+            url: "https://twitter.com/oleggromov"
+        },
+        {
+            name: 'medium',
+            url: 'https://medium.com/@oleggromov'
         }
     ]
 };
