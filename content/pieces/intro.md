@@ -1,1 +1,1 @@
-My name is **Oleg Gromov**. I'm frontend developer and team lead at Yandex, Moscow. I write on my experience in programming and learning.
+My name is **Oleg Gromov**. I'm a software developer who likes exploring the world and discovering his own passions. You're welcome to read my notes here and comment on them!
