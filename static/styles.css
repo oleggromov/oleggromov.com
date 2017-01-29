@@ -5,7 +5,7 @@ body {
 }
 
 .site {
-	font: normal 14px/1.5 "PT Sans", Arial, sans-serif;
+	font: normal 14px/1.7 "Palantino", "PT Serif", serif;
 }
 
 .site__about {
@@ -31,7 +31,8 @@ body {
 		padding-right: 2em;
 		margin: 0 auto;
 		overflow: hidden;
-		font: normal 18px/1.4 "PT Sans",sans-serif;
+		font-size: 18px;
+		line-height: 1.7;
 	}
 
 	.site__about {
@@ -106,9 +107,11 @@ a:hover {
 }
 
 .article h1 a {
-	color: #FF530D;
+	/*color: #FF530D;*/
+	color: #333;
 	text-decoration: none;
-	border-bottom: 1px solid rgba(255, 83, 13, 0.3);
+	/*border-bottom: 1px solid rgba(255, 83, 13, 0.3);*/
+	border-bottom: 1px solid rgba(85, 85, 85, 0.3);
 }
 
 .article h1:first-child {
@@ -148,9 +151,13 @@ a:hover {
 }
 
 .article__date {
-	margin: -1em 0 2em 0;
+	margin-bottom: 2em;
 	font-style: italic;
 	color: #3F5765;
+}
+
+h1 + .article__date {
+	margin-top: -1em;
 }
 
 .article__date_preview {
@@ -158,8 +165,7 @@ a:hover {
 }
 
 .article p {
-	margin: 0.5em 0;
-	line-height: 1.5;
+	margin: 1em 0;
 }
 
 .article__paragraph,
