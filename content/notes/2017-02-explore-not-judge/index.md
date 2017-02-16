@@ -1,6 +1,6 @@
 date: 2017-02-16
 written: 2017-02-14
-more: Proceed to my reasons to abandon blogging
+more: Find out what I realized about perceving the outside world
 template: article
 
 # Explore, not Judge
