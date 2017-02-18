@@ -2,6 +2,7 @@
   "scripts": {
     "oxypogon": "$(npm bin)/oxypogon",
     "build": "rm -rf build/*; cp -R static build/; npm run oxypogon -- build",
+    "publish": "npm run build; ./publish.sh",
     "watch": "npm run oxypogon -- watch"
   }
 }
