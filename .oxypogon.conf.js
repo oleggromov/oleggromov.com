@@ -10,8 +10,15 @@ module.exports = {
         },
 
         lists: [
-            '/',
-            '/notes/'
+            {
+                name: 'everything',
+                url: '/'
+            },
+            {
+                name: 'Notes',
+                url: '/notes/',
+                isCategory: true
+            }
         ],
 
         copy: [],
@@ -32,7 +39,7 @@ module.exports = {
     menu: [
         {
             name: 'Notes',
-            url: '/notes',
+            url: '/notes/',
 
             tags: true
         }

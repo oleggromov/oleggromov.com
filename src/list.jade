@@ -12,7 +12,11 @@ block content
 			h1
 				a(href=page.url)!= page.title
 			div.article__date.article__date_preview
-				| Published on #{util.moment(page.date).format('LL')}
+				| Published in
+				=" "
+				a(href=page.category.url)= page.category.name
+				=" "
+				| on #{util.moment(page.date).format('LL')}
 			if page.tags
 				+tags(page.tags)
 			| !{page.preview}
