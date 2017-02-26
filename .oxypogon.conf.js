@@ -36,15 +36,6 @@ module.exports = {
         previewSize: 2,
     },
 
-    menu: [
-        {
-            name: 'Notes',
-            url: '/notes/',
-
-            tags: true
-        }
-    ],
-
     extra: {
         common: require('./content/common.js')
     }
