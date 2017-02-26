@@ -5,7 +5,10 @@ body {
 }
 
 .site {
-	font: normal 14px/1.7 "Palantino", "PT Serif", serif;
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 1.7;
 }
 
 .site__about {
@@ -31,14 +34,13 @@ body {
 		padding-right: 2em;
 		margin: 0 auto;
 		overflow: hidden;
-		font-size: 18px;
-		line-height: 1.7;
+		font-size: 16px;
 	}
 
 	.site__about {
 		float: right;
 		box-sizing: border-box;
-		width: 20em;
+		width: 23em;
 	}
 
 	.site__content {
@@ -48,7 +50,7 @@ body {
 
 	.site__footer {
 		text-align: center;
-		font-size: 14px;
+		font-size: 13px;
 	}
 }
 
