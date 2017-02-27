@@ -2,26 +2,26 @@ include links
 include tags
 include published
 
-extends layout_article
+extends layout_article_covered
 
 block title
 	| !{data.page.title} — oleggromov.com
 
-block content
+block cover
 	h1!= data.page.title
-
-	.article__date
+	.site__cover-date
 		+published(data.page.category, data.page.date)
 
+	if data.page.written
+		.site__cover-date
+			| Written on #{util.moment(data.page.written).format('LL')}
+
+block content
 	if data.page.tags
 		.article__tags
 			+tags(data.page.tags)
 
 	| !{data.page.html}
-
-	if data.page.written
-		.article__date
-			|  Written on #{util.moment(data.page.written).format('LL')}
 
 block menu
 	+links(data.menu, data.extra.common.external, data.tags)

@@ -1,3 +1,5 @@
+include headstuff
+
 doctype html
 html
 	head
@@ -5,10 +7,8 @@ html
 		title
 			block title
 
-		meta(name="viewport", content="width=device-width, initial-scale=1")
-		link(rel="stylesheet", href="/static/styles.css")
-		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext")
-		link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css")
+		+headstuff
+
 	body
 		.site
 			aside.site__about

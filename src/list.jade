@@ -1,5 +1,6 @@
 include links
 include tags
+include published
 
 extends layout_site
 
@@ -12,11 +13,8 @@ block content
 			h1
 				a(href=page.url)!= page.title
 			div.article__date.article__date_preview
-				| Published in
-				=" "
-				a(href=page.category.url)= page.category.name
-				=" "
-				| on #{util.moment(page.date).format('LL')}
+				+published(page.category, page.date)
+
 			if page.tags
 				+tags(page.tags)
 			| !{page.preview}

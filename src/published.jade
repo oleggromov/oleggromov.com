@@ -1,0 +1,6 @@
+mixin published (category, date)
+	| Published in
+	=" "
+	a(href=category.url)= category.name
+	=" "
+	| on #{util.moment(date).format('LL')}

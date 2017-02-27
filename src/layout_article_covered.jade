@@ -10,7 +10,10 @@ html
 		+headstuff
 
 	body
-		.site
+		.site.site_mode_cover
+			.site__cover(style=`background-image: url(${data.page.getMeta('cover')}); background-color: ${data.page.getMeta('coverColor')}`)
+				block cover
+
 			aside.site__about
 				.sidebar
 					.sidebar__about
