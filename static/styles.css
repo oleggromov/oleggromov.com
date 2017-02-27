@@ -7,21 +7,55 @@ body {
 .site {
 	font-family: 'Merriweather', serif;
 	font-weight: 300;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 1.7;
+}
+
+.site__cover {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100vw;
+	height: 75vh;
+	box-sizing: border-box;
+	padding: 0 2em 4em;
+	min-height: 300px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	text-align: center;
+}
+
+.site__cover h1 {
+	margin: 0 0 0.5em 0;
+	font-size: 250%;
+	line-height: 1.3;
+	letter-spacing: 2px;
+	text-shadow: rgba(0,0,0,0.8) 0 2px 0;
+}
+
+.site__cover-date {
+	font-style: italic;
+	text-shadow: rgba(0,0,0,0.8) 0 1px 0;
+}
+
+.site__cover-date a:link,
+.site__cover-date a:visited {
+	color: white;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .site__about {
 	padding: 2em;
 	background: #efefef;
-	border-bottom: 2px solid #FF530D;
 }
 
 .site__footer {
 	padding: 1em 2em;
-	color: #3F5765;
-	background: #efefef;
-	border-bottom: 2px solid #FF530D;
+	color: #999;
+	border-top: 1px solid #efefef;
 }
 
 .site__content {
@@ -30,27 +64,36 @@ body {
 
 @media (min-width: 1000px) {
 	.site {
-		max-width: 1200px;
-		padding-right: 2em;
-		margin: 0 auto;
 		overflow: hidden;
+		padding: 0 2em;
+		margin: 0 auto;
 		font-size: 16px;
+	}
+
+	.site__cover {
+		margin-left: -2em;
+	}
+
+	.site__cover h1 {
+		font-size: 350%;
+	}
+
+	.site_mode_cover {
+		overflow: visible;
 	}
 
 	.site__about {
 		float: right;
 		box-sizing: border-box;
 		width: 23em;
+		font-size: 90%;
+		background: none;
+		border: none;
 	}
 
 	.site__content {
 		overflow: hidden;
 		padding-right: 4em;
-	}
-
-	.site__footer {
-		text-align: center;
-		font-size: 13px;
 	}
 }
 
@@ -184,6 +227,21 @@ h1 + .article__date {
 	margin-top: 1em;
 }
 
+.article figure {
+	margin: 1em 0;
+	padding: 0;
+}
+
+.article figure img {
+	max-width: 100%;
+}
+
+.article figure figcaption {
+	font-size: 90%;
+	font-style: italic;
+	color: #999;
+}
+
 
 .about__photo {
 	overflow: hidden;
@@ -213,6 +271,16 @@ h1 + .article__date {
 	margin-top: 0;
 }
 
+
+.links__group.links__group_external {
+	margin-top: 1.2em;
+}
+
+.links__reach p {
+	margin: 0;
+	font-style: italic;
+}
+
 .links__sub {
 	margin: 0 0 0 0.6em;
 }
@@ -223,7 +291,8 @@ h1 + .article__date {
 
 .links__group_external .links__item {
 	display: inline-block;
-	margin-right: 0.6em;
+	margin: 0.2em 0.6em 0 0;
+	line-height: 1.2;
 }
 
 .links__item_active {
@@ -255,6 +324,9 @@ h1 + .article__date {
 	text-decoration: underline;
 }
 
+.footer {
+	font-size: 80%;
+}
 
 .footer p {
 	margin: 0;
@@ -262,4 +334,5 @@ h1 + .article__date {
 
 .footer a {
 	color: #2B3A42;
+	border-bottom: 1px solid rgba(43, 58, 66, 0.4);
 }
