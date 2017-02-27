@@ -17,6 +17,7 @@ mixin links(links, external, tags)
 								span.tags__item-count &nbsp;(#{tag.count})
 
 		.links__group.links__group_external
+			.links__reach !{data.pieces.reach}
 			each link in external
 				a.links__item(href=link.url, target='_blank')= link.name
 
