@@ -2,7 +2,8 @@ module.exports = {
     build: {
         content: {
             page: [
-                'notes/**/index.md'
+                'notes/**/index.md',
+                'places/**/index.md'
             ],
             piece: [
                 'pieces/*.md'
@@ -18,10 +19,17 @@ module.exports = {
                 name: 'Notes',
                 url: '/notes/',
                 isCategory: true
+            },
+            {
+                name: 'Places',
+                url: '/places/',
+                isCategory: true
             }
         ],
 
-        copy: [],
+        copy: [
+            'places/**/images/*'
+        ],
 
         tagBaseUrl: '/notes/tag',
 
