@@ -1,7 +1,7 @@
 #!/bin/bash
 
 YEAR=$(date +"%Y")
-COPYRIGHT="© $YEAR Oleg Gromov"
+COPYRIGHT="© $YEAR Oleg Gromov, oleggromov.com"
 INPUT_DIR=$1
 OUTPUT_DIR=$2
 
