@@ -36,7 +36,8 @@ module.exports = {
         paths: {
             content: './content',
             build: './build',
-            tpl: './src'
+            tpl: './src',
+            components: './components'
         }
     },
 

@@ -5,6 +5,8 @@
     "publish": "npm run build; ./publish.sh",
     "watch": "npm run oxypogon -- watch"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "react": "^15.4.2"
+  },
   "dependencies": {}
 }
