@@ -5,7 +5,7 @@ template: article
 
 # Why Capitalists Lie
 
-*__Warning!__ This is an essay written as a part of my English Listening & Speaking course in Columbia West College. It may contain mistakes I had made with no reason to fool anyone but by accident. The main reason for this essay to exist is the need to excercise in writing convincing and well shaped pieces of text. Please, don't use it as a source for your studies or cite as a proof for anything. All of the written below is my personal biased opinion not suitable to rely on.*
+*__Warning!__ This is an essay written as a part of my English Listening & Speaking course in Columbia West College. It may contain mistakes I had made with no reason to fool anyone but by accident. The main reason for this essay to exist is the need to excercise in writing convincing and well shaped pieces of text. Please, don't use it as a source for your studies or cite as a proof of anything. All of the written below is my personal biased opinion not suitable to rely on.*
 
 Milton Friedman once said, “The poor stay poor not because they’re lazy, but because they have no access to capital”. Even though it seems to be obvious from a capitalistic standpoint, I claim that capital can only help after the system itself will have been transformed from within.
 
