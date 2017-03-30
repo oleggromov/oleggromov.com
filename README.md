@@ -14,6 +14,9 @@ This is my personal site's source code. It is generated using Oxypogon.js, the [
 	* take out links from the template into config
 	* set up css compilation from blocks in stylus
 * deploy and web-server
-	* write up the deploy script for github pages
 	* set up caching and prevent touching of not updated pages
 	* make an url diff checker to check if all of the urls originally placed on the site are still present after the deploy
+	* transform the whole site into repositories: content (markdown in fixed format), static engine and it's config
+	* set up caching
+* menu:
+	* decide on how to automatically mark active menu points

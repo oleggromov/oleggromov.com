@@ -1,7 +1,7 @@
 date: 2017-01-30
 written: 2017-01-28
 more: Proceed to my reasons to abandon blogging
-template: article
+template: Article
 
 # Abandoning Blogging
 

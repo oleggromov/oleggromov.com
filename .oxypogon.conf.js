@@ -2,8 +2,9 @@ module.exports = {
     build: {
         content: {
             page: [
-                'notes/**/index.md',
-                'places/**/index.md'
+                // 'notes/**/index.md',
+                // 'places/**/index.md'
+                'notes/2017-01-abandoning-blogging/index.md'
             ],
             piece: [
                 'pieces/*.md'
@@ -36,7 +37,6 @@ module.exports = {
         paths: {
             content: './content',
             build: './build',
-            tpl: './src',
             components: './components'
         }
     },
