@@ -2,7 +2,7 @@ date: 2017-06-22
 written: 2017-06-22
 more: Read the answer to the one of the most important questions in a developer's life
 template: article
-# tags: goals, life
+futuretags: goals, life
 
 # What Are Your Career Goals?
 
