@@ -7,7 +7,7 @@ OUTPUT_DIR=$2
 
 show_usage () {
 	echo "use like:"
-	echo  "./cpright.sh <INPUT_DIR> <OUTPUT_DIR>"
+	echo  "./copy-images.sh <INPUT_DIR> <OUTPUT_DIR>"
 	exit 1
 }
 
