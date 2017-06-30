@@ -28,10 +28,11 @@ module.exports = {
         ],
 
         copy: [
-            'places/**/images/*'
+            'places/**/images/*',
+            'notes/**/images/*'
         ],
 
-        tagBaseUrl: '/notes/tag',
+        tagBaseUrl: '/notes/tags',
 
         paths: {
             content: './content',
