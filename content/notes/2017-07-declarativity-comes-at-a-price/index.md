@@ -1,6 +1,6 @@
 date: 2017-07-02
 written: 2017-06-20
-more: Read the answer to the one of the most important questions in a developer's life
+more: What I state in this article’s title can be split in a few theses.
 template: article
 futuretags: programming, dogma
 
