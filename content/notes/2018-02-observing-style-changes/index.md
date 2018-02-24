@@ -134,4 +134,4 @@ I'm also not quite sure that I haven't forgotten any other ways to affect elemen
 
 Thanks for your attention!
 
-P.S. This article is also (and originally) published for Dev.to community. Possibly, the discussion, if it starts, will happen there.
+P.S. This article is also (and originally) [published for Dev.to community](https://dev.to/oleggromov/observing-style-changes---d4f). Possibly, the discussion, if it starts, will happen there.
