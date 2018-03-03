@@ -3,5 +3,8 @@
     "oxypogon": "$(npm bin)/oxypogon",
     "build": "rm -rf build/*; cp -R static build/; npm run oxypogon -- build",
     "publish": "npm run build; ./publish.sh"
+  },
+  "devDependencies": {
+    "oxypogon": "^0.3.1"
   }
 }
