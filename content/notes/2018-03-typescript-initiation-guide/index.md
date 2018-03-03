@@ -1,6 +1,6 @@
 date: 2018-03-03
 written: 2018-03-03
-more: asdas
+more: Start Small
 template: article
 futuretags: programming, tdd, typescript, javascript, jest
 
@@ -26,7 +26,7 @@ However, applying a new technology usually brings some frustration and it might 
 
 The TypeScript beauty and usefuleness comes primarily from the increased comprehension level it brings when you work with a strictly typed codebase. It includes things like real-time autocomplete suggestions and nice error checking and reporting right in your editor.
 
-![Nice Sublime Editor Autocomplete](images/sublime-ts-autocomplete.jpg)
+![Nice Sublime Editor Autocomplete](images/sublime-ts-autocomplete.png)
 
 I usually use Sublime Text for small projects like SauronStyle. Its TypeScript support is empowered by a few plug-ins, and I chose one of them, [SublimeLinter-contrib-tslint](https://github.com/lavrton/SublimeLinter-contrib-tslint). I don't remember having any issues during the installation but you're very welcome with any questions regarding the set-up process.
 
