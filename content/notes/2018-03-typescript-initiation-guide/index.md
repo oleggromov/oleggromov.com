@@ -6,29 +6,30 @@ futuretags: programming, tdd, typescript, javascript, jest
 
 # TypeScript Initiation Guide
 
-We all know that JavaScript's weak type system makes us developers produce a lot of unnecessary bugs. Possible options to tackle the issue are: quit your front-end developer gig (I wouldn't recommmend considering it seriously), turn into something compiled to Javascript like Elm (which is quite fun but actually *is* another programming language with totally different paradigm), **use strict typing systems such as TypeScript or Flow**, or believe in good luck and occasionally use good practices like mandatory linting and peer code-review before merging.
+We all know that JavaScript's weak type system makes us developers produce a lot of unnecessary bugs. Possible options to tackle the issue are: quit your front-end developer gig (I wouldn't recommend considering it seriously), turn into something compiled to Javascript like Elm (which is quite fun but actually *is* another programming language with totally different paradigm), **use strict typing systems such as TypeScript or Flow**, or believe in good luck and occasionally use good practices like mandatory linting and peer code-review before merging.
 
-For quite a while I've been sticking around the last option but finally decided to turn the page. In this article I'll describe an approach to transforming a tiny codebase into TypeScript, including some nitty-gritty typing details and setting up the necessary tools.
+For quite a while I've been sticking around the last option but finally decided to turn the page. In this article, I'll describe an approach to transforming a tiny codebase into TypeScript, including some nitty-gritty typing details and setting up the necessary tools.
 
 ## Start Small
 
-First off, it would be hard if not impossible to convert a large codebase at once, especially if it's an actively developed project like the one you may be working on every day with numerous coworkers. The strategy in that case might be to divide and conquer, my favorite of all times, which is to start writing new code in TypeScript and converting legacy codebase file by file along with this. It's described decently in the [official migration guide](https://github.com/Microsoft/TypeScript-React-Conversion-Guide#typescript-react-conversion-guide).
+First off, it would be hard if not impossible to convert a large codebase at once, especially if it's an actively developed project like the one you may be working on every day with numerous co-workers. The strategy, in that case, might be to divide and conquer, my favorite of all times, which is to start writing new code in TypeScript and converting legacy codebase file by file along with this. It's described decently in the [official migration guide](https://github.com/Microsoft/TypeScript-React-Conversion-Guide#typescript-react-conversion-guide).
 
 However, applying a new technology usually brings some frustration and it might be better to first get used to it a little bit. I love this approach, and it's perfectly applicable to small personal projects that some of us already work on. If you've got something written in JavaScript and are interested in TypeScript, join along, or just keep reading about my experience of converting [SauronStyle](https://github.com/oleggromov/sauron-style) to TypeScript.
+
 
 ## The Goals
 
 - set up code editor plugins
 - translate the modules' code into TypeScript
-- make sure tests works properly
+- make sure tests work properly
 
 ## Editor Configuration
 
-The TypeScript beauty and usefuleness comes primarily from the increased comprehension level it brings when you work with a strictly typed codebase. It includes things like real-time autocomplete suggestions and nice error checking and reporting right in your editor.
+The TypeScript beauty and usefulness comes primarily from the increased comprehension level it brings when you work with a strictly typed codebase. It includes things like real-time autocomplete suggestions and nice error checking and reporting right in your editor.
 
 ![Nice Sublime Editor Autocomplete](images/sublime-ts-autocomplete.png)
 
-I usually use Sublime Text for small projects like SauronStyle. Its TypeScript support is empowered by a few plug-ins, and I chose one of them, [SublimeLinter-contrib-tslint](https://github.com/lavrton/SublimeLinter-contrib-tslint). I don't remember having any issues during the installation but you're very welcome with any questions regarding the set-up process.
+I usually use Sublime Text for small projects like SauronStyle. Its TypeScript support is empowered by a few plug-ins, and I chose one of them, [SublimeLinter-contrib-tslint](https://github.com/lavrton/SublimeLinter-contrib-tslint). I don't remember having any issues with the installation but you're very welcome with any questions regarding the set-up process.
 
 
 ## Setting Up Compilation with Webpack and TypeScript Compiler
@@ -57,7 +58,7 @@ Change module loader in your `webpack.config.js` accordingly:
   },
 ```
 
-In my simple case I just added the `.ts` extension to the regexp so the loader can also take care of regular JavaScript sources.
+In my simple case, I just added the `.ts` extension to the regexp so the loader can also take care of regular JavaScript sources.
 
 We also need to add `resolve` key so imports without an extension, such as `import MyClass from './MyClass'` can be handled properly.
 
@@ -69,7 +70,7 @@ We also need to add `resolve` key so imports without an extension, such as `impo
 
 Since the [default value](https://webpack.js.org/configuration/resolve/#resolve-enforceextension) is `['.js', '.json']`, make sure to add `'.json'` as well in case your code imports JSON files without specifiying extensions.
 
-The entry point for SauronStyle library is `src/sauron-style.js` but once we rewrite the main module into TypeScript too, it has to be changed to have the right extension:
+The entry point for the SauronStyle library is `src/sauron-style.js` but once we rewrite the main module into TypeScript too, it has to be changed to have the right extension:
 
 ```diff
 -  entry: path.resolve(__dirname, 'src/sauron-style.js'),
@@ -105,11 +106,11 @@ The last but not least is to set up the `tsconfig.json` file. It's described nic
 
 I tried to make it as strict as possible and turn off as many implications as I can.
 
-From now on, TypeScript Compiler must take care of both JavaScript *and* TypeScript source files, which enables seamless transition to the new language.
+From now on, TypeScript Compiler must take care of both JavaScript *and* TypeScript source files, which enables a seamless transition to the new language.
 
 ## Transition to TypeScript
 
-Now we can start translating JS to TS. I'll show you a few examples and share some of the insights I've got during the transition but there're much better and profound sources of knowledge about the language:
+Now we can start translating JS to TS. I'll show you a few examples and share some of the insights I've got during the transition but there are much better and profound sources of knowledge about the language:
 
 - [Official TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/basic-types.html)
 - [TypeScript Deep Dive opensource book](https://basarat.gitbooks.io/typescript/) by [Basarat Ali Syed](https://www.gitbook.com/@basarat)
@@ -142,9 +143,9 @@ It goes through the own properties of an object `b` and compares it to another o
 }
 ```
 
-What TypeScripts offers, is a strong typing system that is applied to every single function and statement throughout your codebase and statically checked at the compilation stage and during the development process. For a developer it means that all the variables should be assigned a particular type: one of the [supported basic types](https://www.typescriptlang.org/docs/handbook/basic-types.html) or a [custom interface](https://www.typescriptlang.org/docs/handbook/interfaces.html), which is a TypeScript way of defining object shapes.
+What TypeScript offers, is a strong typing system that is applied to every single function and statement throughout your codebase and statically checked at the compilation stage and during the development process. For a developer, it means that all the variables should be assigned a particular type: one of the [supported basic types](https://www.typescriptlang.org/docs/handbook/basic-types.html) or a [custom interface](https://www.typescriptlang.org/docs/handbook/interfaces.html), which is a TypeScript way of defining object shapes.
 
-Let's start from creating a new interface for an object representing a difference between 2 objects. I will call it `DiffResult`, capitalized due to the naming convention:
+Let's start by creating a new interface for an object representing a difference between 2 objects. I will call it `DiffResult`, capitalized due to the naming convention:
 
 ```typescript
 interface DiffResult {
@@ -155,7 +156,7 @@ interface DiffResult {
 }
 ```
 
-In the code piece above, `any` stands for any supported type, since we know that compared objects might have different types of property values. Fancy `[key: string]` rhymes with ES2015 [computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names) and means that an object might have any string-defined keys.
+In the code piece above, `any` stands for any supported type since we know that compared objects might have different types of property values. Fancy `[key: string]` rhymes with ES2015 [computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names) and means that an object might have any string-defined keys.
 
 TypeScript introduces a `value: Type` syntax to define types. We'll use it to rewrite the `getDiff` function:
 
@@ -174,7 +175,7 @@ export const getDiff = (a: AnObject, b: AnObject): DiffResult => {
 }
 ```
 
-In the code snippet above you can see how simple it works: you just add the types after variable definitions or function parameters. You should have also notices `AnObject` that just describes objects of any shape:
+In this code snippet, you can see how simple it works: you just add the types after variable definitions or function parameters. You should have also noticed `AnObject` that just describes objects of any shape:
 
 ```typescript
 interface AnObject {
@@ -184,13 +185,13 @@ interface AnObject {
 
 First I called it just `Object` but then there's a collision with [a built-in type](https://blog.mariusschulz.com/2017/02/24/typescript-2-2-the-object-type#object-vs-object-vs). There's also a lowercase `object` and `{}`, each with its own slightly different meaning, but none of them let me compile the source without errors. I'm not sure if having an *interface* for an object of any shape is a good way to achieve strictness so if you happen to know a better approach, please comment on this article.
 
-It's also worth mentioning that TypeScript can *infer* a returned type of a function by simply analyzing its local varabiles, but it's better to [set the type explicitly](https://www.typescriptlang.org/docs/handbook/functions.html#function-types) from the very beginning so we you can keep your thoughts clean and the code concise.
+It's also worth mentioning that TypeScript can *infer* a returned type of a function by simply analyzing its local variables, but it's better to [set the type explicitly](https://www.typescriptlang.org/docs/handbook/functions.html#function-types) from the very beginning so you can keep your thoughts clean and the code concise.
 
 ## Using Type Assertion
 
 Most likely, your common use cases for the TypeScript code interacting with external libraries and/or interfaces will be covered with either [built-in type definitions file `lib.d.ts`](https://basarat.gitbooks.io/typescript/docs/types/lib.d.ts.html) or [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped), a community-created type definition library for the most popular JS libraries.
 
-In same cases, though, it won't be enough. For example, the current definition of a global interface `Window` is apparently lacking the `MutationObserver` notion. So I had to go for the folowing construction:
+In some cases, though, it won't be enough. For example, the current definition of a global interface `Window` is apparently lacking the `MutationObserver` notion. So I had to go for the following construction:
 
 ```typescript
 this.mutationObserver = new (<any>window).MutationObserver(this.checkDiff)
@@ -203,18 +204,18 @@ const isLink = (node: HTMLLinkElement): boolean =>
   node.tagName === 'LINK' && node.rel === 'stylesheet'
 ```
 
-In my codebase it's called from another function, which receives a `NodeList` and calls `isLink` for every provided node, so I had to explicitly cast a `Node` to an `HTMLLinkElement`:
+In my codebase, it's called from another function, which receives a `NodeList` and calls `isLink` for every provided node, so I had to explicitly cast a `Node` to an `HTMLLinkElement`:
 
 ```typescript
 const isLink = isLink(<HTMLLinkElement>node)
 ```
 
-These constructions represent [type assertion](https://basarat.gitbooks.io/typescript/docs/types/type-assertion.html), where you tell the compiler "I know better what type you should treat the variable with". It can also be written in different syntax, `node as HTMLLinkElement`, so the angle braces don't collide with JSX.
+These constructions represent [type assertion](https://basarat.gitbooks.io/typescript/docs/types/type-assertion.html), where you tell the compiler "I know better what type you should treat the variable with". It can also be written in a different syntax, `node as HTMLLinkElement`, so the angle braces don't collide with JSX.
 
 
 ## Configuring Jest to Work with TypeScript Modules
 
-Finally, after we've translated the code into TypeScript, it's time to take care of the tests. I usally use Jest because it includes everything I need: a test runner, an assertion library, mocking helpers etc. And the set-up process is dead simple.
+Finally, after we've translated the code into TypeScript, it's time to take care of the tests. I usually use Jest because it includes everything I need: a test runner, an assertion library, mocking helpers etc. And the set-up process is dead simple.
 
 Probably some developers might conclude that since they've started using TypeScript, they should write tests in TS as well. I personally disagree with that at least because I cannot come up with any additional value it could possibly bring. If you have different observations, please share them in comments to this article.
 
@@ -243,9 +244,9 @@ module.exports = {
 }
 ```
 
-The first line sets which files to transform. Both `.ts` source files *and* `.js` test cases need preliminary compilation. If we remove `.js` from the regexp, which would be correct as I though at first, jest won't know how to handle imports in the test files that are written in JavaScript and have corresponding extension.
+The first line sets what files to transform. Both `.ts` source files *and* `.js` test cases need preliminary compilation. If we remove `.js` from the regexp, which would be correct as I thought at first, jest won't know how to handle imports in the test files that are written in JavaScript and have a corresponding extension.
 
-Then, with `testRegex` and `testPathIgnorePatterns` we set which files to treat as tests and which to completely ignore.
+Then, with `testRegex` and `testPathIgnorePatterns`, we set which files to treat as tests and which to completely ignore.
 
 Finally, `moduleFileExtensions` define how test runner will understand which modules to process. For some unknown reason, if we remove `.js` from the list, it stops seeing the tests again.
 
