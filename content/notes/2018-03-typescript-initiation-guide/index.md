@@ -33,9 +33,9 @@ I usually use Sublime Text for small projects like SauronStyle. Its TypeScript s
 
 ## Setting Up Compilation with Webpack and TypeScript Compiler
 
-SauronStyle is a small library that was initially written in ES2015, which was transpiled with Babel and bundled with Webpack. I wanted to keep module separation but rewrite the code in TypeScript. `tsc`, the TypeScript Compiler, supports modern JavaScript modern system so we just need to replace `babel-loader` with a typescript loader.
+SauronStyle is a small library that was initially written in ES2015, which was transpiled with Babel and bundled with Webpack. I wanted to keep module separation but rewrite the code in TypeScript. `tsc`, the TypeScript Compiler, supports modern JavaScript module system so we just need to replace `babel-loader` with a typescript loader.
 
-Install dependencies (replace `yarn` with `npm` if you use it):
+Install dependencies (replace `yarn add` with `npm install` if you use the latter):
 
 ```bash
 yarn add -D awesome-typescript-loader typescript
@@ -57,7 +57,7 @@ Change module loader in your `webpack.config.js` accordingly:
   },
 ```
 
-In my simple case I just add `.ts` extension to the regexp so awesome-typescript-loader can also take care of regular JavaScript sources.
+In my simple case I just added the `.ts` extension to the regexp so the loader can also take care of regular JavaScript sources.
 
 We also need to add `resolve` key so imports without an extension, such as `import MyClass from './MyClass'` can be handled properly.
 
@@ -174,7 +174,7 @@ export const getDiff = (a: AnObject, b: AnObject): DiffResult => {
 }
 ```
 
-I also added types to the function parameters and after the parentheses. `AnObject` just describes objects of any shape:
+In the code snippet above you can see how simple it works: you just add the types after variable definitions or function parameters. You should have also notices `AnObject` that just describes objects of any shape:
 
 ```typescript
 interface AnObject {
@@ -188,9 +188,9 @@ It's also worth mentioning that TypeScript can *infer* a returned type of a func
 
 ## Using Type Assertion
 
-Most likely, your common use cases for the TypeScript code interacting with external libraries and/or interfaces will be covered with either [built-in type definitions file `lib.d.ts`](https://basarat.gitbooks.io/typescript/docs/types/lib.d.ts.html) or [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped), a community-created type definitions for most popular JS libraries.
+Most likely, your common use cases for the TypeScript code interacting with external libraries and/or interfaces will be covered with either [built-in type definitions file `lib.d.ts`](https://basarat.gitbooks.io/typescript/docs/types/lib.d.ts.html) or [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped), a community-created type definition library for the most popular JS libraries.
 
-In same cases, though, it won't be enough. For example, the current definition of a global interface `Window` is apparantly lacking the `MutationObserver` notion. So I had to go for the folowing construction:
+In same cases, though, it won't be enough. For example, the current definition of a global interface `Window` is apparently lacking the `MutationObserver` notion. So I had to go for the folowing construction:
 
 ```typescript
 this.mutationObserver = new (<any>window).MutationObserver(this.checkDiff)
@@ -203,7 +203,7 @@ const isLink = (node: HTMLLinkElement): boolean =>
   node.tagName === 'LINK' && node.rel === 'stylesheet'
 ```
 
-In my codebase it's called from another function, which receives a `NodeList` and calls `isLink` for every provided node, so I had to explicitly cast `Node`'s to `HTMLLinkElement`'s:
+In my codebase it's called from another function, which receives a `NodeList` and calls `isLink` for every provided node, so I had to explicitly cast a `Node` to an `HTMLLinkElement`:
 
 ```typescript
 const isLink = isLink(<HTMLLinkElement>node)
@@ -214,9 +214,9 @@ These constructions represent [type assertion](https://basarat.gitbooks.io/types
 
 ## Configuring Jest to Work with TypeScript Modules
 
-Finally, after we've translated the code into TypeScript, it's time to take care of the tests. I usally use Jest because it includes everything I need: a test runner, an assertion library, mocking helpers etc. And the process set-up is dead simple.
+Finally, after we've translated the code into TypeScript, it's time to take care of the tests. I usally use Jest because it includes everything I need: a test runner, an assertion library, mocking helpers etc. And the set-up process is dead simple.
 
-Probably some developers might conclude that since they've started using TypeScript, they should write tests in TS as well. I personally disagree with that at least because I cannot come up with any addition value it could possibly bring. If you have different observations, please share them in comments to this article.
+Probably some developers might conclude that since they've started using TypeScript, they should write tests in TS as well. I personally disagree with that at least because I cannot come up with any additional value it could possibly bring. If you have different observations, please share them in comments to this article.
 
 The changes described above have broken the tests. The main reason is the removal of Babel with `.babelrc` so Jest simply doesn't understand imports that are yet unsupported in Node.js. In order to fix that, we're going to manually configure Jest to make it use `ts-jest` loader for the modules written in TypeScript. Let's install it first:
 
@@ -224,7 +224,7 @@ The changes described above have broken the tests. The main reason is the remova
 yarn add -D ts-jest
 ```
 
-The [`ts-jest` module](https://github.com/kulshekhar/ts-jest) also has pretty neat documentation but I'll try to describe it here. The config lives in the `jest.config.js` file in the root folder, which I prefer over cluttered `package.json` with `jest` section. It looks like that:
+The [`ts-jest` module](https://github.com/kulshekhar/ts-jest) also has pretty neat documentation but I'll try to describe the configuration process here. The config lives in the `jest.config.js` file in the root folder, which I prefer over cluttered `package.json` with `jest` section. It looks like that:
 
 ```javascript
 module.exports = {
@@ -243,7 +243,7 @@ module.exports = {
 }
 ```
 
-The first line sets which files to transform. Both `.ts` source files *and* `.js` test cases need preliminary compilation. If we remove `.js` from the regexp, which would be correct as I though at first, jest won't know how to handle imports in the files.
+The first line sets which files to transform. Both `.ts` source files *and* `.js` test cases need preliminary compilation. If we remove `.js` from the regexp, which would be correct as I though at first, jest won't know how to handle imports in the test files that are written in JavaScript and have corresponding extension.
 
 Then, with `testRegex` and `testPathIgnorePatterns` we set which files to treat as tests and which to completely ignore.
 
