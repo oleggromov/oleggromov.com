@@ -1,4 +1,5 @@
 body {
+  padding: 0;
   margin: 0;
   background: black;
   -webkit-font-smoothing: antialiased;
@@ -6,12 +7,12 @@ body {
   overflow: hidden;
 }
 
-.center {
+.header {
   padding: 30px;
 }
 
 .page-title {
-  width: 100%;
+  /* width: 100%; */
   position: relative;
   padding: 4px 30px;
   background: linear-gradient(114deg, #d00, #d90368, #541388);
